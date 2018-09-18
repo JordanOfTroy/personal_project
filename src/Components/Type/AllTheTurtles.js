@@ -1,10 +1,10 @@
 import React from 'react' 
 import {Link} from 'react-router-dom'
 
-export default function Type () {
+export default function AllTheTurtles () {
   return (
     <div>
-      <h1>Type.js</h1>
+      <h1>AllTheTurtles.js</h1>
     </div>
   )
 }
