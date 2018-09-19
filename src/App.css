@@ -1,0 +1,8 @@
+.testImage {
+  width: 200px;
+  height: auto;
+}
+
+.selection {
+  display: flex;
+}

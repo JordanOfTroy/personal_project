@@ -1,8 +1,9 @@
 require('dotenv').config()
 const express = require('express'),
-      session = require('express.session'),
+      session = require('express-session'),
       axios = require('axios'),
-      massive = require('massive')
+      massive = require('massive'),
+      ctrl = require('./Controller')
 
 const app = express()
 
@@ -22,6 +23,7 @@ app.use(session({
 
 /***************************************************************** */
 
+app.get(`/api/type/:id`, ctrl.getTheType )
 
 /***************************************************************** */
 

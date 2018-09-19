@@ -7,14 +7,14 @@ values ('snake'), ('lizard'), ('turtle');
 
 
 insert into sub_types (
-  scientific_name, common_name, adult_size, life_span, temperment, exp_level
+  scientific_name, common_name, adult_size, life_span, temperment, exp_level, type_id
   )
-values ('Python regius', 'Ball Python', 6, 30, 'gentle', 'beginner'),
-('Pantherophis guttatus', 'Corn Snank', 6, 20, 'gentle', 'beginner'),
-('Centrochelys sulcata', 'sulcata tortoise', 8, 120, 'gentle', 'advanced'),
-('Trachemys scripta elegans', 'red-eared slider', 1.5, 25, 'friendly', 'advanced'),
-('Eublepharis macularius', 'leopard gecko', .5, 10, 'friendly', 'intermediate'),
-('Pogona vitticeps', 'bearded dragon', 2, 10, 'friendly', 'intermediate');
+values ('Python regius', 'Ball Python', 6, 30, 'gentle', 'beginner', 1),
+('Pantherophis guttatus', 'Corn Snank', 6, 20, 'gentle', 'beginner', 1),
+('Centrochelys sulcata', 'sulcata tortoise', 8, 120, 'gentle', 'advanced', 3),
+('Trachemys scripta elegans', 'red-eared slider', 1.5, 25, 'friendly', 'advanced', 3),
+('Eublepharis macularius', 'leopard gecko', .5, 10, 'friendly', 'intermediate', 2),
+('Pogona vitticeps', 'bearded dragon', 2, 10, 'friendly', 'intermediate', 2);
 
 
 

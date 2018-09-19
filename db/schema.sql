@@ -18,7 +18,8 @@ create table sub_types (
   adult_size decimal,
   life_span integer,
   temperment text,
-  exp_level text
+  exp_level text,
+  type_id integer references reptile_types(id)
 );
 
 create table animals (
