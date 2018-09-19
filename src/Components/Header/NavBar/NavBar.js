@@ -8,6 +8,7 @@ export default function Logo () {
       <Link to = '/login'> login </Link>
       <Link to = '/faq'> FAQ's </Link>
       <Link to = '/clearance'> Clearance </Link>
+      <Link to = '/login'> Login</Link>
     </div>
   )
 }

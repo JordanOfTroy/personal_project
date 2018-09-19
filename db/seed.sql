@@ -7,14 +7,14 @@ values ('snake'), ('lizard'), ('turtle');
 
 
 insert into sub_types (
-  scientific_name, common_name, adult_size, life_span, temperment, exp_level, type_id
+  scientific_name, common_name, adult_size, life_span, temperment, exp_level, type_id, image_url
   )
-values ('Python regius', 'Ball Python', 6, 30, 'gentle', 'beginner', 1),
-('Pantherophis guttatus', 'Corn Snank', 6, 20, 'gentle', 'beginner', 1),
-('Centrochelys sulcata', 'sulcata tortoise', 8, 120, 'gentle', 'advanced', 3),
-('Trachemys scripta elegans', 'red-eared slider', 1.5, 25, 'friendly', 'advanced', 3),
-('Eublepharis macularius', 'leopard gecko', .5, 10, 'friendly', 'intermediate', 2),
-('Pogona vitticeps', 'bearded dragon', 2, 10, 'friendly', 'intermediate', 2);
+values ('Python regius', 'Ball Pythons', 6, 30, 'gentle', 'beginner', 1, 'https://s3-us-west-1.amazonaws.com/serpents-edge.images/subtype+imaged/bp_main.jpg'),
+('Pantherophis guttatus', 'Corn Snakes', 6, 20, 'gentle', 'beginner', 1, 'https://s3-us-west-1.amazonaws.com/serpents-edge.images/subtype+imaged/cs_main.jpg'),
+('Centrochelys sulcata', 'Sulcata Tortoises', 8, 120, 'gentle', 'advanced', 3, 'https://s3-us-west-1.amazonaws.com/serpents-edge.images/subtype+imaged/sc_main.png'),
+('Trachemys scripta elegans', 'Red-eared Sliders', 1.5, 25, 'friendly', 'advanced', 3, 'https://s3-us-west-1.amazonaws.com/serpents-edge.images/subtype+imaged/res_main.jpg'),
+('Eublepharis macularius', 'Leopard Geckos', .5, 10, 'friendly', 'intermediate', 2, 'https://s3-us-west-1.amazonaws.com/serpents-edge.images/subtype+imaged/lg_main.jpg'),
+('Pogona vitticeps', 'Bearded Dragons', 2, 10, 'friendly', 'intermediate', 2, 'https://s3-us-west-1.amazonaws.com/serpents-edge.images/subtype+imaged/bd_main.png');
 
 
 

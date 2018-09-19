@@ -3,8 +3,8 @@ drop table if exists users;
 drop table if exists animals_morphs;
 drop table if exists morphs;
 drop table if exists animals;
-drop table if exists reptile_types;  
 drop table if exists sub_types;
+drop table if exists reptile_types;  
 
 create table reptile_types (
   id serial primary key,
@@ -19,7 +19,8 @@ create table sub_types (
   life_span integer,
   temperment text,
   exp_level text,
-  type_id integer references reptile_types(id)
+  type_id integer references reptile_types(id),
+  image_url text
 );
 
 create table animals (

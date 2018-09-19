@@ -7,7 +7,7 @@ export default class Type extends Component{
     super(props)
 
     this.state = {
-      display: []
+      displays: []
     }
   }
 
@@ -15,22 +15,31 @@ export default class Type extends Component{
   componentDidMount () {
     let {id} = this.props.match.params
     axios.get(`/api/type/${id}`).then(res => {
-      this.setState({display: res.data})
+      this.setState({displays: res.data})
     })
   }
 
   render () {
-    console.log('state on typs.js', this.state.display)
-
-    this.state.display.forEach((element) => {
-      console.log(element)
+    
+    let {displays} = this.state
+    console.log(displays)
+    let typeCard= displays.map((display, index) => {
+      let {common_name, image_url} = display
+      console.log(image_url)
+      return (
+        <div key = {index}>
+          <img src={image_url} alt={common_name}/>
+          <h4>{common_name}</h4>
+        </div>
+      )
     })
 
     return (
       <div>
-        <h1>type.js</h1>
-        
+        {typeCard}
       </div>
     )
   }
 }
+
+
