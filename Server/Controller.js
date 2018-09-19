@@ -12,6 +12,13 @@ module.exports = {
       res.status(500).send(err)
     })
 
+  },
+
+  login: (req, res) => {
+    const db = req.app.get('db')
+    let {username, password} = req.body 
+    
+
   }
 
 

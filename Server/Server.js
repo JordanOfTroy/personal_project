@@ -21,9 +21,13 @@ app.use(session({
   saveUninitialized: false
 }))
 
+app.use(express.json())
+
 /***************************************************************** */
 
 app.get(`/api/type/:id`, ctrl.getTheType )
+
+app.post('/api/login', ctrl.login)
 
 /***************************************************************** */
 

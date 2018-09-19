@@ -7,6 +7,7 @@ import FAQ from './Components/FAQ/FAQ'
 import Animal from './Components/Animal/Animal'
 import SubType from './Components/SubType/SubType'
 import Type from './Components/Type/Type'
+import Account from './Components/Account/Account'
 
 
 export default (
@@ -18,5 +19,6 @@ export default (
     <Route path = '/login' component = {Login}/>
     <Route path = '/clearance' component = {Clearance}/>
     <Route path = '/faq' component = {FAQ}/>
+    <Route path = '/account' component = {Account} />
   </Switch>
 )
