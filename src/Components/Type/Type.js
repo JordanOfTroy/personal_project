@@ -7,7 +7,7 @@ export default class Type extends Component{
     super(props)
 
     this.state = {
-      display: {}
+      display: []
     }
   }
 
@@ -20,7 +20,12 @@ export default class Type extends Component{
   }
 
   render () {
-    console.log('state on typs.js', this.state)
+    console.log('state on typs.js', this.state.display)
+
+    this.state.display.forEach((element) => {
+      console.log(element)
+    })
+
     return (
       <div>
         <h1>type.js</h1>
