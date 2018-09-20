@@ -17,7 +17,6 @@ export default class Login extends Component {
     }
     this.handleInput = this.handleInput.bind(this)
     this.login = this.login.bind(this)
-    // this.register = this.register.bind(this)
     this.modalToggle = this.modalToggle.bind(this)
   }
 
@@ -32,23 +31,11 @@ export default class Login extends Component {
     axios.post(`/api/login`, {username:username.toLocaleLowerCase(), password:password})
     .then((res) => {
       console.log(res.data)
-      if (res.data[0]) {
+      if (res.data) {
         this.props.history.push(`/account`)
       }
     })
   }
-
-  // register () {
-  //   let {username, password, firstName, lastName, email, image} = this.state
-  //   axios.post(`/api/register`, {
-  //     username: username.toLocaleLowerCase(),
-  //     password: password,
-  //     firstname: firstName,
-  //     lastname: lastName,
-  //     email: email,
-  //     image: image
-  //   })
-  // }
 
   modalToggle () {
     let{modalToggle} = this.state

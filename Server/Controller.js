@@ -32,8 +32,8 @@ module.exports = {
         db.add_user({username, hash, firstname, lastname, email, image}).then((user) => {
           req.session.user.session_id = session_id_count
           session_id_count++
-          req.session.user_id = user[0].id 
-          req.session.user.username = user[0].username 
+          req.session.user = user[0]
+          console.log(req.session.user)
           res.status(200).send(`all's good in da hood!`)
         })
       }
@@ -46,14 +46,13 @@ module.exports = {
     db.get_by_username({username}).then(user => {
       if (user.length > 0) {
         let validPassword = bcrypt.compareSync(password, user[0].password)
-
-        console.log('vpw:',validPassword, 'PW:', password, 'user-PW:', user[0].password)
+        // console.log('vpw:',validPassword, 'PW:', password, 'user-PW:', user[0].password)
         if (validPassword) {
           req.session.user.session_id = session_id_count
           session_id_count++
-          req.session.user_id = user[0].id 
-          req.session.user.username = user[0].username 
-          res.status(200).send(user)
+          req.session.user = user[0]
+          console.log(req.session.user)
+          res.status(200).send(user[0])
         } else {
           res.status(200).send('Invalid Password')
         }
