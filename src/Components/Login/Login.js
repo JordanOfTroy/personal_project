@@ -65,79 +65,28 @@ export default class Login extends Component {
 
   render () {
     console.log('toggle',this.state.modalToggle)
+    let {username, password, firstName, lastName, email, image, modalToggle} = this.state
     return (
       <div>
-        <section>
-          <div>
-            <input
-              onChange = {this.handleInput}
-              name = 'username'
-              value = {this.state.username}
-              placeholder = 'Username'
-              type="text"
-            />
-          </div>
-          <div>
-            <input
-              onChange = {this.handleInput}
-              name = 'password'
-              value = {this.state.password}
-              placeholder = 'Password'
-              type="text"
-            />
-          </div>
-        </section>
-        <section>
-          <div>
-            <input
-              onChange = {this.handleInput}
-              value = {this.state.firstName}
-              name = 'firstName'
-              placeholder = 'First Name' 
-              type="text"/>
-          </div>
-          <div>
-            <input
-              onChange = {this.handleInput}
-              value = {this.state.lastName}
-              name = 'lastName'
-              placeholder = 'Last Name' 
-              type="text"/>
-          </div>
-          <div>
-            <input
-              onChange = {this.handleInput}
-              value = {this.state.email}
-              name = 'email'
-              placeholder = 'Email' 
-              type="text"/>
-          </div>
-          <div>
-            <input
-              onChange = {this.handleInput}
-              value = {this.state.image}
-              name = 'image'
-              placeholder = 'Image URL' 
-              type="text"/>
-          </div>
-        </section>
-        <section>
-          <button
-            onClick = {this.login}
-          >Login</button>
-          <button
-            onClick = {this.register}
-          >Register</button>
-          <button
-            onClick = {this.modalToggle}
-          >DO THE MODAL THING</button>
-        </section>
+       
         {
-          (this.state.modalToggle) ?
-          <Modal_1
-            modalToggle = {this.modalToggle}
-          /> :
-          <p></p>
+          (this.state.modalToggle)
+          ?
+            <Modal_1
+              modalToggleFn = {this.modalToggle}
+              handleInputFn = {this.handleInput}
+              loginFn = {this.login}
+              registerFn = {this.register}
+              username = {username}
+              password = {password}
+              firstName = {firstName}
+              lastName = {lastName}
+              email = {email}
+              image = {image}
+              modalToggle = {modalToggle}
+            />
+          :
+            <p></p>
         }
       </div>
     )

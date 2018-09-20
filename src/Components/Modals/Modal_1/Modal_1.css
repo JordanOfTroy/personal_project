@@ -24,8 +24,9 @@
   cursor: pointer;
   height: 500px;
   width: 500px;
-  border-radius: 4%;
+  border-radius: 3.25%;
   border: 1px solid black;
+  
 }
 
 .xButton {
@@ -33,5 +34,5 @@
   top: 15px;
   /* left: 465px; */
   right: 20px;
-  border-radius: 4%;
+  border-radius: 3.25%;
 }
