@@ -21,7 +21,7 @@ module.exports = {
   register: (req, res) => {
     let {username, password, firstname, lastname, email, image} = req.body
     const db = req.app.get('db')
-    // console.log(username, password, firstname, lastname, email, image)
+    console.log(username, password, firstname, lastname, email, image)
     db.get_by_username({username}).then(user => {
       if (user.length > 0) {
         res.status(200).send('Username taken. Please try again.')

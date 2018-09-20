@@ -35,6 +35,9 @@ class Register extends Component {
       lastname: lastName,
       email: email,
       image: image
+    }).then(res => {
+      console.log(res.data)
+      alert(res.data)
     })
   }
 
