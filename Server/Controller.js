@@ -44,7 +44,7 @@ module.exports = {
     const db = req.app.get('db')
     let {username, password} = req.body
     db.get_by_username({username}).then(user => {
-      if (user.length > 0) {
+      if (user.length) {
         let validPassword = bcrypt.compareSync(password, user[0].password)
         // console.log('vpw:',validPassword, 'PW:', password, 'user-PW:', user[0].password)
         if (validPassword) {

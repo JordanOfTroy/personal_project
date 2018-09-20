@@ -31,7 +31,11 @@ export default class Login extends Component {
     axios.post(`/api/login`, {username:username.toLocaleLowerCase(), password:password})
     .then((res) => {
       console.log(res.data)
-      if (res.data) {
+      if (res.data === 'Invalid Password') {
+        alert(res.data)
+      } else if (res.data === 'Username does not exist') {
+        alert(res.data)
+      } else {
         this.props.history.push(`/account`)
       }
     })
