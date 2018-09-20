@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import Modal_1 from '../Modals/Modal_1/Modal_1'
 
 export default class Login extends Component {
   constructor (props) {
@@ -11,11 +12,13 @@ export default class Login extends Component {
       firstName: '',
       lastName: '',
       email: '',
-      image: ''
+      image: '',
+      modalToggle: true
     }
     this.handleInput = this.handleInput.bind(this)
     this.login = this.login.bind(this)
     this.register = this.register.bind(this)
+    this.modalToggle = this.modalToggle.bind(this)
   }
 
   handleInput (e) {
@@ -47,7 +50,21 @@ export default class Login extends Component {
     })
   }
 
+  modalToggle () {
+    let{modalToggle} = this.state
+    if (!modalToggle) {
+      this.setState({
+        modalToggle: true
+      })
+    } else if (modalToggle) {
+      this.setState({
+        modalToggle: false
+      })
+    }
+  }
+
   render () {
+    console.log('toggle',this.state.modalToggle)
     return (
       <div>
         <section>
@@ -111,7 +128,17 @@ export default class Login extends Component {
           <button
             onClick = {this.register}
           >Register</button>
+          <button
+            onClick = {this.modalToggle}
+          >DO THE MODAL THING</button>
         </section>
+        {
+          (this.state.modalToggle) ?
+          <Modal_1
+            modalToggle = {this.modalToggle}
+          /> :
+          <p></p>
+        }
       </div>
     )
   }

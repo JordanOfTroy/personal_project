@@ -30,7 +30,7 @@ module.exports = {
               hash = bcrypt.hashSync(password, salt)
               console.log(hash)
         db.add_user({username, hash, firstname, lastname, email, image}).then((user) => {
-          res.session.user.session_id = session_id_count
+          req.session.user.session_id = session_id_count
           session_id_count++
           req.session.user_id = user[0].id 
           req.session.user.username = user[0].username 
