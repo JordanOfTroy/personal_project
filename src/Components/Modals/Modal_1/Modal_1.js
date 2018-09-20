@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Modal_1.css'
+import {Link} from 'react-router-dom'
 
 class Modal_1 extends Component {
   render(props) {
@@ -31,50 +32,21 @@ class Modal_1 extends Component {
               />
             </div>
           </section>
-          <section>
-            <div>
-              <input
-                onChange={handleInputFn}
-                value={firstName}
-                name='firstName'
-                placeholder='First Name'
-                type="text" />
-            </div>
-            <div>
-              <input
-                onChange={handleInputFn}
-                value={lastName}
-                name='lastName'
-                placeholder='Last Name'
-                type="text" />
-            </div>
-            <div>
-              <input
-                onChange={handleInputFn}
-                value={email}
-                name='email'
-                placeholder='Email'
-                type="text" />
-            </div>
-            <div>
-              <input
-                onChange={handleInputFn}
-                value={image}
-                name='image'
-                placeholder='Image URL'
-                type="text" />
-            </div>
-          </section>
-          <section>
+          
+          <section className = 'logOrReg'>
             <button
+              className = 'button'
               onClick={loginFn}
             >Login</button>
-            <button
-              onClick={registerFn}
-            >Register</button>
+            <h4>Or</h4>
+            <Link to = '/register'>
+              <button
+                className = 'button'
+              >Register</button>
+            </Link>
           </section>
           <button
-            className='xButton'
+            className='button xButton'
             onClick={modalToggleFn}
           >X</button>
         </div>

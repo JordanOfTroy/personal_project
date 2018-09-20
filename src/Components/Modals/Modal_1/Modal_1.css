@@ -22,11 +22,17 @@
   text-align: center;
   padding: 4px;
   cursor: pointer;
-  height: 500px;
+  height: 250px;
   width: 500px;
   border-radius: 3.25%;
   border: 1px solid black;
   
+}
+
+.button {
+  border: 1px, solid black;
+  background-color: white;
+  margin: 0px 15px;
 }
 
 .xButton {
@@ -35,4 +41,14 @@
   /* left: 465px; */
   right: 20px;
   border-radius: 3.25%;
+  margin: 0px;
+}
+
+.logOrReg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  margin-top: 15px;
+
 }
