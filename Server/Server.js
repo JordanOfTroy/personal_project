@@ -3,7 +3,8 @@ const express = require('express'),
       session = require('express-session'),
       axios = require('axios'),
       massive = require('massive'),
-      ctrl = require('./Controller')
+      ctrl = require('./Controller'),
+      checkUserSession = require('./Middleware/checkUserSession')
 
 const app = express()
 
@@ -23,11 +24,14 @@ app.use(session({
 
 app.use(express.json())
 
+app.use(checkUserSession)
+
 /***************************************************************** */
 
 app.get(`/api/type/:id`, ctrl.getTheType )
 
 app.post('/api/login', ctrl.login)
+app.post('/api/register', ctrl.register)
 
 /***************************************************************** */
 

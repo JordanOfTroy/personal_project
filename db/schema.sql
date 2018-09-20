@@ -36,10 +36,11 @@ create table animals (
 
 create table users (
   id serial primary key,
-  username varchar(30),
-  password varchar(30),
+  username varchar(30) unique,
+  password text unique,
   first_name varchar(30),
   last_name varchar(30),
+  email varchar(100),
   image text
 );
 
