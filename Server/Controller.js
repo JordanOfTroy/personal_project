@@ -34,7 +34,7 @@ module.exports = {
           session_id_count++
           req.session.user_id = user[0].id 
           req.session.user.username = user[0].username 
-          res.status(200).send('all good in da hood!')
+          res.status(200).send(`all's good in da hood!`)
         })
       }
     })
