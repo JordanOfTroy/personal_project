@@ -53,7 +53,7 @@ module.exports = {
           session_id_count++
           req.session.user_id = user[0].id 
           req.session.user.username = user[0].username 
-          res.status(200).send()
+          res.status(200).send(user)
         } else {
           res.status(200).send('Invalid Password')
         }
