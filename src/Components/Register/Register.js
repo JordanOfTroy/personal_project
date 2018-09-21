@@ -33,13 +33,20 @@ class Register extends Component {
       password: password,
       firstname: firstName,
       lastname: lastName,
+      firstname: firstName,
+      lastname: lastName,
       email: email,
       image: image
-    }).then(res => {
-      console.log(res.data)
-      alert(res.data)
+    }).then((res) => {
+      // console.log(res.data)
+      if (res.data === 'Username taken. Please try again.') {
+        alert(res.data)
+      } else {
+        this.props.history.push(`/account`)
+      }
     })
   }
+
 
   render () {
     let {username, password, firstName, lastName, email, image} = this.state

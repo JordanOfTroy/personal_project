@@ -1,6 +1,7 @@
 import React, {Component} from 'react' 
 import {Link} from 'react-router-dom'
 import axios from 'axios'
+import './Type.css'
 
 export default class Type extends Component{
   constructor(props) {

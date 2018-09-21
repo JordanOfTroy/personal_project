@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import Modal_1 from '../Modals/Modal_1/Modal_1'
+import getLoginInfo from '../../ducks/reducer'
+import {connect} from 'react-redux'
 
-export default class Login extends Component {
+class Login extends Component {
   constructor (props) {
     super(props)
 
@@ -52,10 +54,11 @@ export default class Login extends Component {
         modalToggle: false
       })
     }
+
   }
 
   render () {
-    console.log('toggle',this.state.modalToggle)
+    // console.log('toggle',this.state.modalToggle)
     let {username, password, firstName, lastName, email, image, modalToggle} = this.state
     return (
       <div>
@@ -83,3 +86,14 @@ export default class Login extends Component {
     )
   }
 }
+
+function mapStateToProps (state) {
+  let {username, password, firstName, lastName, email, image} = state
+
+  return (
+    username, password, firstName, lastName, email, image
+  )
+}
+
+export default connect(mapStateToProps, {getLoginInfo})(Login)
+

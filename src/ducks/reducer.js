@@ -1,29 +1,44 @@
 const initialState = {
+  username: '',
+  firstName: '',
+  lastName: '',
+  email: '',
+  image: '',
 
 }
 
 /******************************************************** */
 //Action Types
-/**Example: Const DO_THE_THING = 'DO_THE_THING */
+const INITIAL_GRAB = 'INITIAL_GRAB'
+
 
 /******************************************************** */
 //Action Creators
-/**Example: export function doTheThing (theThing) {
- *              return {
- *                type: DO_THE_THING,
- *                payload: theThing
- *              }
- *          } */
 
+ export function initialGrab (info) {
+   return {
+     type: INITIAL_GRAB,
+     payload: info
+   }
+ }
+ 
 
 
 /******************************************************** */
 // Reducer Function
 
 function reducer (state = initialState, action) {
-  switch (action.type) {
-    // case DO_THE_THING:
-    //   return Object.assign({}, state, {'propName': action.payload})
+  switch(action.type) {
+
+    case INITIAL_GRAB:
+      let {username, firstName, lastName, email, image} = action.payload
+      return Object.assign({}, state, {
+        username: username,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        image: image
+      })
 
 
     default:

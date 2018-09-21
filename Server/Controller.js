@@ -34,7 +34,7 @@ module.exports = {
           session_id_count++
           req.session.user = user[0]
           console.log(req.session.user)
-          res.status(200).send(`all's good in da hood!`)
+          res.status(200).send(user[0])
         })
       }
     })
@@ -60,6 +60,23 @@ module.exports = {
         res.status(200).send('Username does not exist')
       }
     })
+  },
+
+
+
+  getByUsername: (req, res) => {
+    // let {username} = res.params
+    // const db = req.app.get('db')
+    console.log(req.session.user)
+    res.status(200).send(req.session.user)
+    // db.get_by_username({username})
+  },
+
+
+
+  logout: (req, res) => {
+    req.session.destroy()
+    res.redirect('/')
   }
 
 

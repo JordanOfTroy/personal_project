@@ -4,11 +4,11 @@ import './index.css';
 import App from './App';
 import {unregister} from './registerServiceWorker';
 import {Provider} from 'react-redux'
-import Store from './Store'
+import store from './Store'
 
 ReactDOM.render(
 
-<Provider stpre = {Store}>
+<Provider store = {store}>
   <App />
 </Provider>
 
