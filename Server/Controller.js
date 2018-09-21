@@ -51,7 +51,7 @@ module.exports = {
           req.session.user.session_id = session_id_count
           session_id_count++
           req.session.user = user[0]
-          console.log(req.session.user)
+          // console.log(req.session.user)
           res.status(200).send(user[0])
         } else {
           res.status(200).send('Invalid Password')
@@ -65,18 +65,18 @@ module.exports = {
 
 
   getByUsername: (req, res) => {
-    // let {username} = res.params
-    // const db = req.app.get('db')
-    console.log(req.session.user)
+   
     res.status(200).send(req.session.user)
-    // db.get_by_username({username})
+ 
   },
 
 
 
   logout: (req, res) => {
+    // console.log('i werk')
     req.session.destroy()
-    res.redirect('/')
+    console.log(req.session.user)
+    // res.redirect('/')
   }
 
 

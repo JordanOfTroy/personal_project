@@ -1,35 +1,43 @@
-import React from  'react'
+import React, {Component} from  'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import axios from 'axios'
+import {initialGrab} from '../../../ducks/reducer'
 
-function NavBar (props) {
+class NavBar extends Component {
 
-  let order66 = () => {
+  order66 = () => {
     axios.get('/logout')
+    this.props.initialGrab({})
   }
 
-  let {username} = props
+  
+
+  render () {
+  let {username} = this.props
   return (
     <div>
       <Link to = '/'> Home </Link>
       {
         username 
         ?
-        <div>
-          <Link 
-            to = '/logout'
-            onClick = {order66()}
-          > logout </Link>     
+          <a 
+            onClick = {this.order66}
+            href = 'http://localhost:3000/#/'
+          > Logout </a>     
+          :
+          <Link to = '/login'> login </Link>
+        }
+        {
+          username
+          &&
           <Link to = '/account'> Account </Link>
-        </div>
-        :
-        <Link to = '/login'> login </Link>
-      }
+        }
       <Link to = '/faq'> FAQ's </Link>
       <Link to = '/clearance'> Clearance </Link>
     </div>
   )
+}
 }
 
 function mapStateToProps (state) {
@@ -40,4 +48,4 @@ function mapStateToProps (state) {
   }
 }
 
-export default connect (mapStateToProps)(NavBar)
+export default connect (mapStateToProps, {initialGrab})(NavBar)

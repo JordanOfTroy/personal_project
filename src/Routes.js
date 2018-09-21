@@ -22,6 +22,6 @@ export default (
     <Route path = '/faq' component = {FAQ}/>
     <Route path = '/account' component = {Account} />
     <Route path = '/register' component = {Register}/>
-    <Route path = '/logout' component = {Dashboard} />
+    {/* <Route path = '/logout' component = {Dashboard} /> */}
   </Switch>
 )

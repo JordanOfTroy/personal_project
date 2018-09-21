@@ -16,8 +16,13 @@ class Account extends Component {
     }
   }
 
+  componentDidUpdate (prevprops) {
+    if (prevprops.username !== this.props.username) {
+      console.log('fired')
+    }
+  }
+
   componentDidMount() {
-    // let {usernam} = this.props.match.parmas
     let {initialGrab} = this.props
     axios.get(`/api/user`).then((res) => {
       console.log(res.data)
@@ -47,6 +52,10 @@ class Account extends Component {
     )
   }
 }
+ function mapStateToProps (state) {
+   let {username} = state
 
+   return {username}
+ }
 
-export default connect(null, {initialGrab})(Account)
+export default connect(mapStateToProps, {initialGrab})(Account)
