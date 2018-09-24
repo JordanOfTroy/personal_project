@@ -7,8 +7,8 @@ module.exports = {
 
   getTheType: (req, res) => {
     const db = req.app.get('db')
-    let {id} = req.params
-    db.get_the_type({id}).then(types => {
+    let {typeid} = req.params
+    db.get_the_type({typeid}).then(types => {
       // console.log(types)
       res.status(200).send(types)
     })
@@ -16,6 +16,19 @@ module.exports = {
       res.status(500).send(err)
     })
 
+  },
+
+  getBySubtype: (req, res) => {
+    // console.log('shots fired')
+    const db = req.app.get('db')
+    let {subid} = req.params
+    db.get_by_subtype({subid}).then(subTypes => {
+      // console.log(subType)
+      res.status(200).send(subTypes)
+    })
+    .catch(err => {
+      res.status(500).send(err)
+    })
   },
 
   register: (req, res) => {

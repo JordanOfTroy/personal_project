@@ -41,9 +41,10 @@ app.use((req, res, next) => {
 
 /***************************************************************** */
 
-app.get(`/api/type/:id`, ctrl.getTheType )
+app.get(`/api/type/:typeid`, ctrl.getTheType )
 app.get('/api/user', ctrl.getByUsername)
 app.get('/logout', ctrl.logout)
+app.get('/api/subtype/:subid', ctrl.getBySubtype)
 
 app.post('/api/login', ctrl.login)
 app.post('/api/register', ctrl.register)

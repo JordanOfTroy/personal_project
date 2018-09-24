@@ -14,8 +14,8 @@ import Register from './Components/Register/Register'
 export default (
   <Switch>
     <Route exact path = '/' component = {Dashboard}/>
-    <Route path = '/type/:id' component = {Type} />
-    <Route path = '/subtype' component = {SubType}/>
+    <Route path = '/type/:typeid' component = {Type} />
+    <Route path = '/subtype/:subid' component = {SubType}/>
     <Route path = '/animal' component = {Animal}/>
     <Route path = '/login' component = {Login}/>
     <Route path = '/clearance' component = {Clearance}/>

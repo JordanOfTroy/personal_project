@@ -14,8 +14,8 @@ export default class Type extends Component{
 
 
   componentDidMount () {
-    let {id} = this.props.match.params
-    axios.get(`/api/type/${id}`).then(res => {
+    let {typeid} = this.props.match.params
+    axios.get(`/api/type/${typeid}`).then(res => {
       this.setState({displays: res.data})
     })
   }
@@ -23,13 +23,16 @@ export default class Type extends Component{
   render () {
     
     let {displays} = this.state
-    console.log(displays)
+    // console.log(displays)
     let typeCard= displays.map((display, index) => {
-      let {common_name, image_url} = display
-      console.log(image_url)
+      let {common_name, image_url, id} = display
+      // console.log('LOOK AT ME',id)
+    
       return (
         <div key = {index}>
-          <img src={image_url} alt={common_name}/>
+          <Link to = {`/subtype/${id}`} >
+            <img src={image_url} alt={common_name}/>
+          </Link>
           <h4>{common_name}</h4>
         </div>
       )
