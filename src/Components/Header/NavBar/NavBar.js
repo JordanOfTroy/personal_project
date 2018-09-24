@@ -21,18 +21,23 @@ class NavBar extends Component {
       {
         username 
         ?
-          <a 
-            onClick = {this.order66}
-            href = 'http://localhost:3000/#/'
-          > Logout </a>     
-          :
-          <Link to = '/login'> login </Link>
-        }
-        {
-          username
-          &&
-          <Link to = '/account'> Account </Link>
-        }
+        <a 
+          onClick = {this.order66}
+          href = 'http://localhost:3000/#/'
+        > Logout </a>     
+        :
+        <Link to = '/login'> login </Link>
+      }
+      {
+        username
+        &&
+        <Link to = '/account'> Account </Link>
+      }
+      {
+        username
+        &&
+        <Link to = '/cart'> Cart </Link>
+      }
       <Link to = '/faq'> FAQ's </Link>
       <Link to = '/clearance'> Clearance </Link>
     </div>

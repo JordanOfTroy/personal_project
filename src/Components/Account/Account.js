@@ -12,35 +12,47 @@ class Account extends Component {
       firstName: '',
       lastName: '',
       image: '',
-      username: ''
+      username: '',
+      editToggle: false
     }
+    this.handleClick = this.handleClick.bind(this)
   }
 
   componentDidUpdate (prevprops) {
     if (prevprops.username !== this.props.username) {
-      console.log('fired')
+      // console.log('fired')
     }
   }
 
   componentDidMount() {
     let {initialGrab} = this.props
     axios.get(`/api/user`).then((res) => {
-      console.log(res.data)
+      // console.log(res.data)
       let {email, first_name, last_name, image, username} = res.data
       this.setState({
        email: email,
        firstName: first_name,
        lastName: last_name,
        image: image,
-       username: username 
+       username: username,
       })
       initialGrab(this.state)
     })
   }
+
+  handleClick () {
+    let {editToggle} = this.state
+    if (!editToggle) {
+      console.log('shots fired')
+      this.setState({editToggle: true})
+    } else if (editToggle) {
+      console.log('shots saved')
+      this.setState({editToggle: false})
+    }
+  }
   
   render () {
-  let {email, firstName, lastName, image, username } = this.state
-  console.log(this.props.match.params)
+  let {email, firstName, lastName, image, username, editToggle } = this.state
     return(
       <div>
         <h1>Account.js</h1>
@@ -48,6 +60,17 @@ class Account extends Component {
         <h2>Name: {`${firstName} ${lastName}`}</h2>
         <h2>Username: {username}</h2>
         <h2>Email: {email}</h2>
+        <div>
+          {
+            editToggle ? 
+            <button
+              onClick = {this.handleClick}
+            >Edit</button> :
+            <button
+              onClick = {this.handleClick}
+            >Save</button>
+          }
+        </div>
       </div>
     )
   }
