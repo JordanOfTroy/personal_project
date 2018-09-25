@@ -7,15 +7,26 @@ class Cart extends Component {
     super(props)
 
     this.state = {
-      amount: 7523,
-      display: []
+      amount: 0.00,
+      subTotal: 0,
+      displays: []
 
     }
   }
 
   componentDidMount () {
     axios.get('api/cartcontent').then(res => {
-      console.log(res.data)
+      // console.log(res.data)
+      this.setState({displays: res.data})
+      let {displays} = this.state
+      let sub = 0
+      displays.forEach(display => {
+        // console.log(display)
+        let costVal = Number(display.cost)
+        sub += costVal
+        this.setState({ subTotal: sub})
+        this.setState({amount: sub })
+      })
     })
   }
 
@@ -27,9 +38,29 @@ class Cart extends Component {
 }
 
   render () {
+    let {displays, amount, subTotal} = this.state
+    // console.log(displays)
+    let cartItem = displays.map((display, index) => {
+      let {cost, unique_id, image} = display
+      return (
+        <div key = {index} >
+          <img src={image} alt=""/>
+          <button>X</button>
+          <h4>Product ID: {unique_id}</h4>
+          <h4>Price: ${cost}</h4>
+        </div>
+      )
+    })
     return (
       <div>
-        <h1>Cart.js</h1>
+        <section>
+          {cartItem}
+        </section>
+        <section>
+          <h2>Sub Total: ${subTotal.toFixed(2)}</h2>
+          <h2>Shipping: $75.00</h2>
+          <h2>Total: ${(amount +75).toFixed(2)}</h2>
+        </section>
         <StripeCheckout
                 name="Stripe Demo inc."
                 description="Dolla Dolla Bills"

@@ -23,16 +23,15 @@ class SubType extends Component {
   }
 
   addToCart(id) {
-  console.log(id)
+  // console.log(id)
     axios.post('/api/addtocart', {id})
   }
 
   render (){
    let {displays} = this.state
-   console.log(displays)
+  //  console.log(displays)
     let individual = displays.map((display, index) => {
       let {cost, hatch_date, unique_id, gender, image, id} = display
-
       return (
         <div key = {index}>
           <div>

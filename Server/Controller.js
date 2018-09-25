@@ -138,7 +138,7 @@ module.exports = {
     let id = req.session.user.id,
         db = req.app.get('db')
     db.get_cart_content({id}).then(items => {
-      console.log(items)
+      // console.log(items)
       res.status(200).send(items)
     })
     .catch(err => {
