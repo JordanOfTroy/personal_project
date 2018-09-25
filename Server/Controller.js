@@ -145,8 +145,22 @@ module.exports = {
       console.log(err)
       res.status(500).send(err)
     })
-  }
+  },
 
+
+  order66: (req, res) => {
+    // console.log('fire ONE')
+    let pID = req.params.id,
+        uID = req.session.user.id,
+        db = req.app.get('db')
+    db.order66({pID, uID}).then(items => {
+      res.status(200).send(items)
+    })
+    .catch(err => {
+      console.log(err)
+      res.status(500).send(err)
+    })
+  }
 
 
 }

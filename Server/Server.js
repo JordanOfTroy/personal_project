@@ -54,6 +54,8 @@ app.post('/api/addtocart', ctrl.addToCart)
 
 app.put('/edituserinfo', ctrl.updateUserInfo)
 
+app.delete(`/api/order66/:id`, ctrl.order66)
+
 /***************************************************************** */
 
 

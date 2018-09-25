@@ -7,7 +7,7 @@ class Cart extends Component {
     super(props)
 
     this.state = {
-      amount: 0.00,
+      amount: 0,
       subTotal: 0,
       displays: []
 
@@ -30,6 +30,13 @@ class Cart extends Component {
     })
   }
 
+  order66 (id) {
+    axios.delete(`/api/order66/${id}`).then(res => {
+      this.setState({displays: res.data})
+      this.componentDidMount()
+    })
+  }
+
   onToken = (token) => {
     token.card = void 0
     axios.post('/api/payment', {token, amount: this.state.amount}).then(res => {
@@ -39,13 +46,15 @@ class Cart extends Component {
 
   render () {
     let {displays, amount, subTotal} = this.state
-    // console.log(displays)
+    console.log(displays)
     let cartItem = displays.map((display, index) => {
-      let {cost, unique_id, image} = display
+      let {cost, unique_id, image, id} = display
       return (
         <div key = {index} >
           <img src={image} alt=""/>
-          <button>X</button>
+          <button
+            onClick = {() => this.order66(id)}
+          >X</button>
           <h4>Product ID: {unique_id}</h4>
           <h4>Price: ${cost}</h4>
         </div>
@@ -67,7 +76,7 @@ class Cart extends Component {
                 image="http://via.placeholder.com/100x100"
                 token= {this.onToken}
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
-                amount={this.state.amount}
+                amount={(this.state.amount +75)}
             />
       </div>
     )
