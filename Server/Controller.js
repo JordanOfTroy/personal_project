@@ -130,8 +130,21 @@ module.exports = {
         uID = req.session.user.id,
         db = req.app.get('db')
     db.add_to_cart({pID, uID})
-    console.log('i wurked')
+    // console.log('i wurked')
+  },
 
+
+  getCartContent: (req, res) => {
+    let id = req.session.user.id,
+        db = req.app.get('db')
+    db.get_cart_content({id}).then(items => {
+      console.log(items)
+      res.status(200).send(items)
+    })
+    .catch(err => {
+      console.log(err)
+      res.status(500).send(err)
+    })
   }
 
 

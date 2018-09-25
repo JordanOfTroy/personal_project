@@ -7,9 +7,16 @@ class Cart extends Component {
     super(props)
 
     this.state = {
-      amount: 7523
+      amount: 7523,
+      display: []
 
     }
+  }
+
+  componentDidMount () {
+    axios.get('api/cartcontent').then(res => {
+      console.log(res.data)
+    })
   }
 
   onToken = (token) => {
@@ -18,8 +25,6 @@ class Cart extends Component {
         console.log(res)
     })
 }
-
-/*Cart should display info based off the cart table in the DB*/
 
   render () {
     return (

@@ -45,6 +45,7 @@ app.get(`/api/type/:typeid`, ctrl.getTheType )
 app.get('/api/user', ctrl.getByUsername)
 app.get('/logout', ctrl.logout)
 app.get('/api/subtype/:subid', ctrl.getBySubtype)
+app.get('/api/cartcontent', ctrl.getCartContent)
 
 app.post('/api/login', ctrl.login)
 app.post('/api/register', ctrl.register)
