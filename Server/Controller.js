@@ -1,4 +1,6 @@
-const bcrypt = require('bcryptjs')
+require('dotenv').config()
+const bcrypt = require('bcryptjs'),
+      stripe = require('stripe')(process.env.STRIPE_SECRET)
 let session_id_count = 1
 
 
@@ -15,7 +17,6 @@ module.exports = {
     .catch(err => {
       res.status(500).send(err)
     })
-
   },
 
   getBySubtype: (req, res) => {
@@ -64,7 +65,7 @@ module.exports = {
           req.session.user.session_id = session_id_count
           session_id_count++
           req.session.user = user[0]
-          // console.log(req.session.user)
+          console.log(req.session.user)
           res.status(200).send(user[0])
         } else {
           res.status(200).send('Invalid Password')
@@ -76,20 +77,61 @@ module.exports = {
   },
 
 
-
-  getByUsername: (req, res) => {
-   
-    res.status(200).send(req.session.user)
- 
+  updateUserInfo: (req, res) => {
+    const db = req.app.get('db')
+    let {username, firstName, lastName, email, id} = req.body
+    db.update_user_info({username, firstName, lastName, email, id}).then(user => {
+      req.session.user = user[0]
+      console.log(req.session)
+    }).then((user => {
+      res.status(200).send(user[0])
+    }))
+    .catch(err => {
+      res.status(500).send(err)
+    })
   },
 
 
+  getByUsername: (req, res) => {
+    res.status(200).send(req.session.user)
+  },
+
 
   logout: (req, res) => {
-    // console.log('i werk')
     req.session.destroy()
-    console.log(req.session.user)
-    // res.redirect('/')
+  },
+
+
+  handlePayment: (req, res) => {
+    const { amount, token:{id}} = req.body
+    stripe.charges.create(
+        {
+            amount: amount,
+            currency: "usd",
+            source: id,
+            description: "Test charge from Travis"
+        },
+        (err, charge) => {
+            if(err) {
+                console.log(err)
+                return res.status(500).send(err)
+            } else {
+                console.log(charge)
+                return res.status(200).send(charge)
+            }
+        }
+    )
+},
+
+  addToCart: (req, res) => {
+    // console.log(req.body.id)
+    // console.log(req.session.user.id)
+    let pID = req.body.id,
+        uID = req.session.user.id,
+        db = req.app.get('db')
+    db.add_to_cart({pID, uID})
+    console.log('i wurked')
+
   }
 
 

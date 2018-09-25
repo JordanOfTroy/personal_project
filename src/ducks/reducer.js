@@ -2,14 +2,14 @@ const initialState = {
   username: '',
   firstName: '',
   lastName: '',
-  email: '',
-  image: '',
+  email: ''
 
 }
 
 /******************************************************** */
 //Action Types
 const INITIAL_GRAB = 'INITIAL_GRAB'
+      // UPDATE_USER_INFO = 'UPDATE_USER_INFO'
 
 
 /******************************************************** */
@@ -21,6 +21,13 @@ const INITIAL_GRAB = 'INITIAL_GRAB'
      payload: info
    }
  }
+
+//  export function updateUser (newInfo) {
+//    return {
+//      type: UPDATE_USER_INFO,
+//      payload: newInfo
+//    }
+//  }
  
 
 
@@ -31,14 +38,22 @@ function reducer (state = initialState, action) {
   switch(action.type) {
 
     case INITIAL_GRAB:
-      let {username, firstName, lastName, email, image} = action.payload
+      let {username, firstName, lastName, email} = action.payload
       return Object.assign({}, state, {
         username: username,
         firstName: firstName,
         lastName: lastName,
         email: email,
-        image: image
       })
+
+    // case UPDATE_USER_INFO:
+    //   let {username, firstName, lastName, email} = action.payload
+    //   return Object.assign({}, state, {
+    //     username: username,
+    //     firstName: firstName,
+    //     lastName: lastName,
+    //     email: email
+    //   })
 
 
     default:

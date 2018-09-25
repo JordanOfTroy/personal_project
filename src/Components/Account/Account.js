@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import {initialGrab} from '../../ducks/reducer'
+import './Account.css'
 
 class Account extends Component {
   constructor (props) {
@@ -11,23 +12,48 @@ class Account extends Component {
       email: '',
       firstName: '',
       lastName: '',
-      image: '',
       username: '',
-      editToggle: false
+      editToggle: false,
+      id: 0
     }
-    this.handleClick = this.handleClick.bind(this)
+    this.handleEdit = this.handleEdit.bind(this)
+    this.handleSave = this.handleSave.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
   componentDidUpdate (prevprops) {
     if (prevprops.username !== this.props.username) {
-      // console.log('fired')
+      console.log(this.props)
+    } else if (prevprops.email !== this.props.email) {
+      console.log('hi mom')
     }
   }
 
   componentDidMount() {
     let {initialGrab} = this.props
     axios.get(`/api/user`).then((res) => {
-      // console.log(res.data)
+      console.log(res.data)
+      let {email, first_name, last_name, username, id} = res.data
+      this.setState({
+       email: email,
+       firstName: first_name,
+       lastName: last_name,
+       username: username,
+       id: id
+      })
+      initialGrab(this.state)
+    })
+  }
+
+  handleEdit () {
+    this.setState({ editToggle: true})
+  }
+
+  handleSave () {
+    let {initialGrab} = this.props
+    let {email, firstName, lastName, username, id} = this.state
+
+    axios.put('/edituserinfo',{email, firstName, lastName, username, id} ).then((res) => {
       let {email, first_name, last_name, image, username} = res.data
       this.setState({
        email: email,
@@ -36,49 +62,102 @@ class Account extends Component {
        image: image,
        username: username,
       })
+      // console.log('look at me',res.data.email, this.state.email)
       initialGrab(this.state)
     })
+
+    this.setState({ editToggle: false})
   }
 
-  handleClick () {
-    let {editToggle} = this.state
-    if (!editToggle) {
-      console.log('shots fired')
-      this.setState({editToggle: true})
-    } else if (editToggle) {
-      console.log('shots saved')
-      this.setState({editToggle: false})
-    }
+  handleChange (e) {
+    this.setState({
+      [e.target.name]:e.target.value
+    })
   }
   
   render () {
-  let {email, firstName, lastName, image, username, editToggle } = this.state
+  let {email, firstName, lastName, username, editToggle } = this.state
+  console.log(this.state)
     return(
       <div>
-        <h1>Account.js</h1>
-        <img src={image} alt="profile pic"/>
-        <h2>Name: {`${firstName} ${lastName}`}</h2>
-        <h2>Username: {username}</h2>
-        <h2>Email: {email}</h2>
-        <div>
+        <section>
+          <div>
+            <h2>Name: {`${firstName} ${lastName}`}</h2>
           {
-            editToggle ? 
-            <button
-              onClick = {this.handleClick}
-            >Edit</button> :
-            <button
-              onClick = {this.handleClick}
-            >Save</button>
+            editToggle 
+            &&
+            <input
+              value = {firstName}
+              placeholder = {firstName}
+              onChange = {this.handleChange}
+              name = 'firstName' 
+              type="text"/>
           }
+          {
+            editToggle
+            &&
+            <input
+              value = {lastName}
+              placeholder = {lastName}
+              onChange = {this.handleChange}
+              name = 'lastName' 
+              type="text"/>
+          }
+          </div>
+          <div>
+            <h2>Username: {username}</h2>
+            {
+              editToggle
+              &&
+              <input
+                value = {username}
+                placeholder = {username}
+                onChange = {this.handleChange}
+                name = 'username'
+                type="text"/>
+            }
+          </div>
+          <div>
+            <h2>Email: {email}</h2>
+            {
+              editToggle
+              &&
+              <input
+                value = {email}
+                placeholder = {email}
+                onChange = {this.handleChange}
+                name = 'email' 
+                type="text"/>
+            }
+          </div>
+        </section>
+        <section>
+          <div>
+            {
+              !editToggle ? 
+              <button
+                onClick = {this.handleEdit}
+              >Edit</button> 
+              :
+              <button
+                onClick = {this.handleSave}
+              >Save</button>
+            }
+          </div>
+        </section>
         </div>
-      </div>
     )
   }
 }
  function mapStateToProps (state) {
-   let {username} = state
+   let {username, email, firstName, lastName} = state
 
-   return {username}
+   return {
+     username,
+     email, 
+     firstName,
+     lastName
+    }
  }
 
 export default connect(mapStateToProps, {initialGrab})(Account)

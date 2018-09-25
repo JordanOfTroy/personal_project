@@ -1,5 +1,4 @@
 import React, {Component} from 'react' 
-import {Link} from 'react-router-dom'
 import axios from  'axios'
 
 
@@ -11,6 +10,7 @@ class SubType extends Component {
     this.state = {
       displays: []
     }
+    this.addToCart = this.addToCart.bind(this)
   }
 
 
@@ -22,16 +22,19 @@ class SubType extends Component {
     })
   }
 
-
+  addToCart(id) {
+  console.log(id)
+    axios.post('/api/addtocart', {id})
+  }
 
   render (){
    let {displays} = this.state
    console.log(displays)
     let individual = displays.map((display, index) => {
-      let {cost, hatch_date, unique_id, gender, image} = display
+      let {cost, hatch_date, unique_id, gender, image, id} = display
 
       return (
-        <div>
+        <div key = {index}>
           <div>
             <img src={image} alt="available individual"/>
           </div>
@@ -42,7 +45,9 @@ class SubType extends Component {
             <h4>cost: {cost}</h4>
           </div>
           <div>
-            <button>Add To Cart</button>
+            <button
+              onClick = {() => this.addToCart(id)}
+            >Add To Cart</button>
           </div>
         </div>
       )

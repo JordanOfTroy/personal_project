@@ -48,6 +48,10 @@ app.get('/api/subtype/:subid', ctrl.getBySubtype)
 
 app.post('/api/login', ctrl.login)
 app.post('/api/register', ctrl.register)
+app.post('/api/payment', ctrl.handlePayment)
+app.post('/api/addtocart', ctrl.addToCart)
+
+app.put('/edituserinfo', ctrl.updateUserInfo)
 
 /***************************************************************** */
 
