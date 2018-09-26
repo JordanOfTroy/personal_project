@@ -35,19 +35,19 @@ module.exports = {
   register: (req, res) => {
     let {username, password, firstname, lastname, email, image} = req.body
     const db = req.app.get('db')
-    console.log(username, password, firstname, lastname, email, image)
+    // console.log(username, password, firstname, lastname, email, image)
     db.get_by_username({username}).then(user => {
       if (user.length > 0) {
         res.status(200).send('Username taken. Please try again.')
       } else {
         const salt = bcrypt.genSaltSync(10),
               hash = bcrypt.hashSync(password, salt)
-              console.log(hash)
+              // console.log(hash)
         db.add_user({username, hash, firstname, lastname, email, image}).then((user) => {
           req.session.user.session_id = session_id_count
           session_id_count++
           req.session.user = user[0]
-          console.log(req.session.user)
+          // console.log(req.session.user)
           res.status(200).send(user[0])
         })
       }
@@ -65,7 +65,7 @@ module.exports = {
           req.session.user.session_id = session_id_count
           session_id_count++
           req.session.user = user[0]
-          console.log(req.session.user)
+          // console.log(req.session.user)
           res.status(200).send(user[0])
         } else {
           res.status(200).send('Invalid Password')
@@ -82,7 +82,7 @@ module.exports = {
     let {username, firstName, lastName, email, id} = req.body
     db.update_user_info({username, firstName, lastName, email, id}).then(user => {
       req.session.user = user[0]
-      console.log(req.session)
+      // console.log(req.session)
     }).then((user => {
       res.status(200).send(user[0])
     }))

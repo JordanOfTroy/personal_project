@@ -39,14 +39,14 @@ class Cart extends Component {
 
   onToken = (token) => {
     token.card = void 0
-    axios.post('/api/payment', {token, amount: this.state.amount}).then(res => {
+    axios.post('/api/payment', {token, amount: (this.state.amount + 75)*100}).then(res => {
         console.log(res)
     })
 }
 
   render () {
     let {displays, amount, subTotal} = this.state
-    console.log(displays)
+    // console.log(displays)
     let cartItem = displays.map((display, index) => {
       let {cost, unique_id, image, id} = display
       return (
@@ -76,7 +76,7 @@ class Cart extends Component {
                 image="http://via.placeholder.com/100x100"
                 token= {this.onToken}
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
-                amount={(this.state.amount +75)}
+                amount={((this.state.amount +75)*100)}
             />
       </div>
     )
