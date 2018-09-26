@@ -1,5 +1,7 @@
 import React, {Component} from 'react' 
 import axios from  'axios'
+import {connect} from 'react-redux'
+import {setNumOfCartItems} from '../../ducks/reducer'
 
 
 
@@ -23,8 +25,12 @@ class SubType extends Component {
   }
 
   addToCart(id) {
+    let {setNumOfCartItems} = this.props
   // console.log(id)
-    axios.post('/api/addtocart', {id})
+    axios.post('/api/addtocart', {id}).then(res => {
+      // console.log(res.data.length)
+      setNumOfCartItems(res.data.length)
+    })
   }
 
   render (){
@@ -62,4 +68,4 @@ class SubType extends Component {
   
 }
 
-export default SubType
+export default connect(null, {setNumOfCartItems})(SubType)

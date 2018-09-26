@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import StripeCheckout from 'react-stripe-checkout'
 import axios from 'axios'
+import {connect} from 'react-redux'
+import {setNumOfCartItems} from '../../ducks/reducer'
 
 class Cart extends Component {
   constructor(props) {
@@ -31,9 +33,12 @@ class Cart extends Component {
   }
 
   order66 (id) {
+    let{setNumOfCartItems} = this.props
     axios.delete(`/api/order66/${id}`).then(res => {
       this.setState({displays: res.data})
+      setNumOfCartItems(res.data.length)
       this.componentDidMount()
+
     })
   }
 
@@ -83,4 +88,4 @@ class Cart extends Component {
   }
 }
 
-export default Cart
+export default connect(null, {setNumOfCartItems})(Cart)

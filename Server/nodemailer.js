@@ -1,10 +1,10 @@
+require('dotenv').config()
 let nodemailer = require('nodemailer')
 let smtpTransport = require('nodemailer-smtp-transport')
-require('dotenv').config()
 
 
 let {RGE,EPW} = process.env
-console.log(RGE, EPW)
+// console.log(RGE, EPW)
 let transporter = nodemailer.createTransport(smtpTransport({
   service: 'gmail',
   host: 'smtp.gmail.com',
@@ -36,13 +36,3 @@ transporter.sendMail(mailOptions, (error, info) => {
 
 
 
-// service: 'gmail',
-//   secure: false,
-//   port: 25,
-//   auth: {
-//     user: 'jordantroysmithson@gmail.com',
-//     pass: EPW
-//   },
-//   tls: {
-//     rejectUnauthorized: false
-//   }

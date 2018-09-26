@@ -6,3 +6,7 @@
 .selection {
   display: flex;
 }
+
+#svgImg {
+  width: 40px
+}

@@ -2,13 +2,14 @@ const initialState = {
   username: '',
   firstName: '',
   lastName: '',
-  email: ''
-
+  email: '',
+  numOfCartItems: 0
 }
 
 /******************************************************** */
 //Action Types
-const INITIAL_GRAB = 'INITIAL_GRAB'
+const INITIAL_GRAB = 'INITIAL_GRAB',
+      SET_NUM_OF_CART_ITEMS = 'SET_NUM_OF_CART_ITEMS'
       // UPDATE_USER_INFO = 'UPDATE_USER_INFO'
 
 
@@ -19,6 +20,13 @@ const INITIAL_GRAB = 'INITIAL_GRAB'
    return {
      type: INITIAL_GRAB,
      payload: info
+   }
+ }
+
+ export function setNumOfCartItems (num) {
+   return {
+     type: SET_NUM_OF_CART_ITEMS,
+     payload: num
    }
  }
 
@@ -45,6 +53,9 @@ function reducer (state = initialState, action) {
         lastName: lastName,
         email: email,
       })
+
+    case SET_NUM_OF_CART_ITEMS:
+      return Object.assign({}, state, {numOfCartItems: action.payload})
 
     // case UPDATE_USER_INFO:
     //   let {username, firstName, lastName, email} = action.payload

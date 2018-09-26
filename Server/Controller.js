@@ -129,7 +129,10 @@ module.exports = {
     let pID = req.body.id,
         uID = req.session.user.id,
         db = req.app.get('db')
-    db.add_to_cart({pID, uID})
+    db.add_to_cart({pID, uID}).then(items => {
+      console.log(items)
+      res.status(200).send(items)
+    })
     // console.log('i wurked')
   },
 

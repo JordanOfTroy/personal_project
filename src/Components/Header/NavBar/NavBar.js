@@ -3,10 +3,11 @@ import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import axios from 'axios'
 import {initialGrab} from '../../../ducks/reducer'
+import cartImage from '../../../Assets/online-shopping-cart.svg'
 
 class NavBar extends Component {
 
-  order66 = () => {
+  logout = () => {
     axios.get('/logout')
     this.props.initialGrab({})
   }
@@ -14,42 +15,53 @@ class NavBar extends Component {
   
 
   render () {
-  let {username} = this.props
+  let {username, numOfCartItems} = this.props
   return (
     <div>
-      <Link to = '/'> Home </Link>
+      <Link to = '/'> Shop </Link>
       {
         username 
         ?
         <a 
-          onClick = {this.order66}
+          onClick = {this.logout}
           href = 'http://localhost:3000/#/'
         > Logout </a>     
         :
         <Link to = '/login'> login </Link>
       }
+      <Link to = '/faq'> FAQ's </Link>
+      <Link to = '/clearance'> Clearance </Link>
       {
         username
         &&
         <Link to = '/account'> Account </Link>
       }
-      {
-        username
-        &&
-        <Link to = '/cart'> Cart </Link>
-      }
-      <Link to = '/faq'> FAQ's </Link>
-      <Link to = '/clearance'> Clearance </Link>
+      
+        
+        
+      <Link to = '/cart'>
+        <img 
+          id = 'svgImg'
+          src={cartImage} 
+          alt=""
+        /> 
+     </Link>
+     {numOfCartItems}
+      
+    
+
+      
     </div>
   )
 }
 }
 
 function mapStateToProps (state) {
-  let {username} = state
+  let {username, numOfCartItems} = state
 
   return {
-    username
+    username,
+    numOfCartItems
   }
 }
 
