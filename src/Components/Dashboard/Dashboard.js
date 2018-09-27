@@ -5,7 +5,7 @@ import '../../../src/App.css'
 
 export default function Dashboard () {
   return (
-    <div>
+    <div className = 'wrapper'>
       <section>
         <h1>this is going ot be an AWESOME carousel of sweet images</h1>
         <h4>Use your imagination!</h4>

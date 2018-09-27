@@ -1,3 +1,13 @@
+/*
+light green = #A1E88B 
+medium green = #38E04B
+dark green = #0E7B11
+light gray = #8F938E
+medium gray = #50524F
+dark gray = #232723
+black = #090B09
+*/
+
 .testImage {
   width: 200px;
   height: auto;
@@ -9,18 +19,19 @@
 
 #SE_Logo {
   width: 100px;
+  color: #A1E88B;
 }
 
-/* #svgImg {
-  width: 40px
-} */
 .header_display {
+  position: fixed;
+  width: 100vw;
+  top: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: gray;
+  background-color: #50524F;
   padding: 9px;
-
+  z-index: 10;
 }
 
 .nav_bar {
@@ -31,7 +42,7 @@
 }
 
 .nav_link {
-  color: black;
+  color: #A1E88B;
   font-size: 20px;
   font-weight: bold;
 }
@@ -44,6 +55,7 @@
 }
 
 #cart_svg {
+  color: #A1E88B;
   position: relative;
   bottom: 13px;
   width: 45px
@@ -55,5 +67,20 @@
   top: 1px;
   font-size: 15px;
   font-weight: bold;
+}
+
+.wrapper {
+  position: relative;
+  top: 121px;
+  background-color: #8F938E;
+  height: 80vh;
+}
+
+.footer {
+  background-color: #50524F;
+  height: 50px;
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
 }
 
