@@ -55,7 +55,12 @@ class Cart extends Component {
       }
       
     })
-    axios.post('/api/sendemail')
+    axios.post('/api/sendemail').then(res => {
+      console.log(res.data)
+      if (res.data) {
+        this.props.history.push('/')
+      }
+    })
 
 }
 

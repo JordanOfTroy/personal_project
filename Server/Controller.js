@@ -210,6 +210,7 @@ module.exports = {
       console.log(error)
     } else {
       console.log('email has been sent')
+      res.status(200).send('email has been sent')
     }
   })
   }
