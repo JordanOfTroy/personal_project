@@ -106,6 +106,7 @@ module.exports = {
 
 
   handlePayment: (req, res) => {
+    console.log(req.session)
     const { amount, token:{id}} = req.body
     stripe.charges.create(
         {
@@ -179,7 +180,7 @@ module.exports = {
   },
 
   sendEmail: (req, res) => {
-    console.log('fired')
+    let{first_name, last_name} = req.session.user
     let {RGE,EPW} = process.env
   // console.log(RGE, EPW)
   let transporter = nodemailer.createTransport(smtpTransport({
@@ -200,7 +201,8 @@ module.exports = {
     from: 'customer_support@serpentsedge.com',
     to: 'jordantroysmithson@gmail.com',
     subject: 'Order Confirmation',
-    text: 'Thank you for your purchase form SerpentsEdge.com.'
+    html: `<h1>Dear ${first_name} ${last_name},</h1><h1>Serpents Edge would like to thank you for your recent purchase.</h1>`
+    // text: 'Thank you for your purchase form SerpentsEdge.com.'
   }
 
   transporter.sendMail(mailOptions, (error, info) => {
