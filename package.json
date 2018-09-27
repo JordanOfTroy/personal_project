@@ -11,6 +11,7 @@
     "massive": "^5.4.0",
     "nodemailer": "^4.6.8",
     "nodemailer-smtp-transport": "^2.7.4",
+    "nuka-carousel": "^4.4.0",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-redux": "^5.0.7",

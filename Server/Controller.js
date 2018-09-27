@@ -116,7 +116,7 @@ module.exports = {
                 console.log(err)
                 return res.status(500).send(err)
             } else {
-                console.log(charge)
+                // console.log(charge)
                 return res.status(200).send(charge)
             }
         }
@@ -165,7 +165,15 @@ module.exports = {
     })
   },
 
-  
+  emptyCart: (req, res) => {
+    let uID = req.session.user.id,
+        db = req.app.get('db')
+
+    db.empty_cart({uID}).then(items => {
+      console.log(items)
+      res.status(200).send(items)
+    })
+  }
 
 
 }

@@ -1,14 +1,21 @@
 import React from 'react' 
 import {Link} from 'react-router-dom'
 import '../../../src/App.css'
+import Carousel from 'nuka-carousel'
 
 
 export default function Dashboard () {
   return (
     <div className = 'wrapper'>
       <section>
-        <h1>this is going ot be an AWESOME carousel of sweet images</h1>
-        <h4>Use your imagination!</h4>
+        <Carousel>
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide1" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide2" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide3" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide4" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide5" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide6" />
+        </Carousel>
       </section>
       <section className = 'selection'>
         <div>

@@ -43,10 +43,19 @@ class Cart extends Component {
   }
 
   onToken = (token) => {
+    let{setNumOfCartItems} = this.props
     token.card = void 0
     axios.post('/api/payment', {token, amount: (this.state.amount + 75)*100}).then(res => {
         console.log(res)
     })
+    axios.delete('/api/emptycart').then(res => {
+      if (!res.data[0]) {
+        setNumOfCartItems(0)
+        this.componentDidMount()
+      }
+      
+    })
+
 }
 
   render () {
