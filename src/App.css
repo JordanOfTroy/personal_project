@@ -11,9 +11,9 @@
   width: 100px;
 }
 
-#svgImg {
+/* #svgImg {
   width: 40px
-}
+} */
 .header_display {
   display: flex;
   justify-content: space-between;
@@ -32,5 +32,28 @@
 
 .nav_link {
   color: black;
-  
+  font-size: 20px;
+  font-weight: bold;
 }
+
+.nav_text {
+  position: relative;
+  top: 10px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+#cart_svg {
+  position: relative;
+  bottom: 13px;
+  width: 45px
+}
+
+.cart_indicator {
+  position: relative;
+  right: 45px;
+  top: 1px;
+  font-size: 15px;
+  font-weight: bold;
+}
+

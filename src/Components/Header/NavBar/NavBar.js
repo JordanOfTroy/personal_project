@@ -30,7 +30,7 @@ class NavBar extends Component {
   return (
     <div className = 'nav_bar'>
       <Link
-        className = 'nav_link'
+        className = 'nav_link nav_text'
         to = '/'> Shop </Link>
       {
         username 
@@ -41,35 +41,38 @@ class NavBar extends Component {
         > Logout </a>     
         :
         <Link
-          className = 'nav_link'
+          className = 'nav_link nav_text'
           to = '/login'> login </Link>
       }
       <Link
-        className = 'nav_link'
+        className = 'nav_link nav_text'
         to = '/faq'> FAQ's </Link>
       <Link
-        className = 'nav_link'
+        className = 'nav_link nav_text'
         to = '/clearance'> Clearance </Link>
       {
         username
         &&
         <Link
-          className = 'nav_link'
+          className = 'nav_link nav_text'
           to = '/account'> Account </Link>
       }
-      
-        
         
       <Link
-        className = 'nav_link'
+        id = 'cart_svg'
+        // className = 'nav_link'
         to = '/cart'>
         <img 
           id = 'svgImg'
           src={cartImage} 
           alt=""
         /> 
+
      </Link>
-     {numOfCartItems} 
+     <h6
+      className = 'cart_indicator'
+     >{numOfCartItems}</h6>
+      
       
     
 
