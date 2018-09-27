@@ -7,6 +7,30 @@
   display: flex;
 }
 
+#SE_Logo {
+  width: 100px;
+}
+
 #svgImg {
   width: 40px
+}
+.header_display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gray;
+  padding: 9px;
+
+}
+
+.nav_bar {
+  width: 400px;
+  /* background-color: white; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_link {
+  color: black;
+  
 }

@@ -2,7 +2,7 @@ import React, {Component} from  'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import axios from 'axios'
-import {initialGrab} from '../../../ducks/reducer'
+import {initialGrab, setNumOfCartItems} from '../../../ducks/reducer'
 import cartImage from '../../../Assets/online-shopping-cart.svg'
 
 class NavBar extends Component {
@@ -18,14 +18,20 @@ class NavBar extends Component {
   }
 
   componentDidMount () {
-
+    let {setNumOfCartItems} = this.props
+    axios.get('/api/cartcontent').then(res => {
+    console.log(res.data.length)
+    setNumOfCartItems(res.data.length)
+    })
   }
 
   render () {
   let {username, numOfCartItems} = this.props
   return (
-    <div>
-      <Link to = '/'> Shop </Link>
+    <div className = 'nav_bar'>
+      <Link
+        className = 'nav_link'
+        to = '/'> Shop </Link>
       {
         username 
         ?
@@ -34,19 +40,29 @@ class NavBar extends Component {
           href = 'http://localhost:3000/#/'
         > Logout </a>     
         :
-        <Link to = '/login'> login </Link>
+        <Link
+          className = 'nav_link'
+          to = '/login'> login </Link>
       }
-      <Link to = '/faq'> FAQ's </Link>
-      <Link to = '/clearance'> Clearance </Link>
+      <Link
+        className = 'nav_link'
+        to = '/faq'> FAQ's </Link>
+      <Link
+        className = 'nav_link'
+        to = '/clearance'> Clearance </Link>
       {
         username
         &&
-        <Link to = '/account'> Account </Link>
+        <Link
+          className = 'nav_link'
+          to = '/account'> Account </Link>
       }
       
         
         
-      <Link to = '/cart'>
+      <Link
+        className = 'nav_link'
+        to = '/cart'>
         <img 
           id = 'svgImg'
           src={cartImage} 
@@ -72,4 +88,4 @@ function mapStateToProps (state) {
   }
 }
 
-export default connect (mapStateToProps, {initialGrab})(NavBar)
+export default connect (mapStateToProps, {initialGrab, setNumOfCartItems})(NavBar)
