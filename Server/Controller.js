@@ -106,7 +106,7 @@ module.exports = {
 
 
   handlePayment: (req, res) => {
-    console.log(req.session)
+    // console.log(req.session)
     const { amount, token:{id}} = req.body
     stripe.charges.create(
         {
@@ -209,7 +209,7 @@ module.exports = {
     if (error) {
       console.log(error)
     } else {
-      console.log('email has been sent', info)
+      console.log('email has been sent')
     }
   })
   }

@@ -63,11 +63,11 @@ export default function Dashboard () {
           <h1>Turtles</h1>
         </div>
       </section>
-      <button
+      {/* <button
         onClick = {
           () => axios.post('/api/sendemail')
         }
-      >SEND EMAIL!!!</button>
+      >SEND EMAIL!!!</button> */}
     </div>
   )
 }

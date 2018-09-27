@@ -55,6 +55,7 @@ class Cart extends Component {
       }
       
     })
+    axios.post('/api/sendemail')
 
 }
 
