@@ -1,6 +1,9 @@
 require('dotenv').config()
 const bcrypt = require('bcryptjs'),
-      stripe = require('stripe')(process.env.STRIPE_SECRET)
+      stripe = require('stripe')(process.env.STRIPE_SECRET),
+      nodemailer = require('nodemailer'),
+      smtpTransport = require('nodemailer-smtp-transport')
+
 let session_id_count = 1
 
 
@@ -130,7 +133,7 @@ module.exports = {
         uID = req.session.user.id,
         db = req.app.get('db')
     db.add_to_cart({pID, uID}).then(items => {
-      console.log(items)
+      // console.log(items)
       res.status(200).send(items)
     })
     // console.log('i wurked')
@@ -170,9 +173,43 @@ module.exports = {
         db = req.app.get('db')
 
     db.empty_cart({uID}).then(items => {
-      console.log(items)
+      // console.log(items)
       res.status(200).send(items)
     })
+  },
+
+  sendEmail: (req, res) => {
+    console.log('fired')
+    let {RGE,EPW} = process.env
+  // console.log(RGE, EPW)
+  let transporter = nodemailer.createTransport(smtpTransport({
+    service: 'gmail',
+    host: 'smtp.gmail.com',
+    secure: false,
+    auth: {
+      user: RGE,
+      pass: EPW
+    },
+    tls: {
+      rejectUnauthorized: false
+    }
+    
+  }))
+
+  let mailOptions = {
+    from: 'customer_support@serpentsedge.com',
+    to: 'jordantroysmithson@gmail.com',
+    subject: 'Order Confirmation',
+    text: 'Thank you for your purchase form SerpentsEdge.com.'
+  }
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error)
+    } else {
+      console.log('email has been sent', info)
+    }
+  })
   }
 
 

@@ -30,14 +30,6 @@ const INITIAL_GRAB = 'INITIAL_GRAB',
    }
  }
 
-//  export function updateUser (newInfo) {
-//    return {
-//      type: UPDATE_USER_INFO,
-//      payload: newInfo
-//    }
-//  }
- 
-
 
 /******************************************************** */
 // Reducer Function
@@ -57,14 +49,6 @@ function reducer (state = initialState, action) {
     case SET_NUM_OF_CART_ITEMS:
       return Object.assign({}, state, {numOfCartItems: action.payload})
 
-    // case UPDATE_USER_INFO:
-    //   let {username, firstName, lastName, email} = action.payload
-    //   return Object.assign({}, state, {
-    //     username: username,
-    //     firstName: firstName,
-    //     lastName: lastName,
-    //     email: email
-    //   })
 
 
     default:

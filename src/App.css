@@ -6,7 +6,13 @@ light gray = #8F938E
 medium gray = #50524F
 dark gray = #232723
 black = #090B09
+
+font-family: 'Megrim', cursive;
+font-family: 'Syncopate', sans-serif;
 */
+
+
+@import url('https://fonts.googleapis.com/css?family=Megrim|Syncopate');
 
 
 .testImage {
@@ -52,7 +58,8 @@ black = #090B09
   position: relative;
   top: 10px;
   text-decoration: none;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  font-family: 'Megrim', cursive;
 }
 
 #cart_svg {

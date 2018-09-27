@@ -51,6 +51,7 @@ app.post('/api/login', ctrl.login)
 app.post('/api/register', ctrl.register)
 app.post('/api/payment', ctrl.handlePayment)
 app.post('/api/addtocart', ctrl.addToCart)
+app.post('/api/sendemail', ctrl.sendEmail)
 
 app.put('/edituserinfo', ctrl.updateUserInfo)
 

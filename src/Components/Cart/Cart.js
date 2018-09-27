@@ -60,7 +60,7 @@ class Cart extends Component {
 
   render () {
     let {displays, amount, subTotal} = this.state
-    console.log(displays)
+    // console.log(displays)
     let cartItem = displays.map((display, index) => {
       let {cost, unique_id, image, id} = display
       return (
