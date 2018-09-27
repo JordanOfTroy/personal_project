@@ -6,13 +6,20 @@ import {initialGrab} from '../../../ducks/reducer'
 import cartImage from '../../../Assets/online-shopping-cart.svg'
 
 class NavBar extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {}
+  }
 
   logout = () => {
     axios.get('/logout')
     this.props.initialGrab({})
   }
 
-  
+  componentDidMount () {
+
+  }
 
   render () {
   let {username, numOfCartItems} = this.props
@@ -46,7 +53,7 @@ class NavBar extends Component {
           alt=""
         /> 
      </Link>
-     {numOfCartItems}
+     {numOfCartItems} 
       
     
 
