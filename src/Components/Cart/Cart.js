@@ -61,6 +61,7 @@ class Cart extends Component {
         this.props.history.push('/')
       }
     })
+    alert('Confirmation email has been sent')
 
 }
 
