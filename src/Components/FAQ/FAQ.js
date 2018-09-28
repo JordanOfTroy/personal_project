@@ -1,40 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const Wrapper = styled.section `
-  background: gray;
-  color: lightgreen
-  height: 100vh;
-  width: 100vww;
-  margin-top: 121px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-`;
-
-const Question = styled.div `
-  display: flex;
-  justify-content: space-around;
-  // background: lightgreen;
-  height: 140px;
-`
-
-const Title = styled.h1`
-  flex-basis: 30%;
-  // background: gray;
-  text-align: center;
-  vertical-align: middle;
-  // padding-top: 55px;
-  font-weight: bold;
-  font-size: 25px
-`;
-const Text = styled.h2`
-  // background: white;
-  flex-basis: 60%;
-  text-align: center;
-  // padding-top: 55px;
-  font-size: 18px;
-`;
+import {Wrapper, Title, Question, Text} from './FAQ_CSS'
 
 export default function FAQ () {
   return (
