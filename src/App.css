@@ -36,7 +36,9 @@ font-family: 'Syncopate', sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #50524F;
+  background-image: linear-gradient( to bottom,
+   #0E7B11, #090B09
+  );
   padding: 9px;
   z-index: 10;
 }
@@ -48,11 +50,6 @@ font-family: 'Syncopate', sans-serif;
   justify-content: space-between;
 }
 
-.nav_link {
-  color: #A1E88B;
-  font-size: 20px;
-  font-weight: bold;
-}
 
 .nav_text {
   position: relative;
@@ -60,6 +57,22 @@ font-family: 'Syncopate', sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   font-family: 'Megrim', cursive;
+  color: #A1E88B;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 5px 5px 5px #090B09;
+}
+
+.nav_text:hover {
+  position: relative;
+  top: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Megrim', cursive;
+  color: #38E04B;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 10px 10px 3px black, 0 0 60px #A1E88B, 0 0 5px  #8F938E ;
 }
 
 #cart_svg {
@@ -71,7 +84,7 @@ font-family: 'Syncopate', sans-serif;
 
 .cart_indicator {
   position: relative;
-  right: 45px;
+  right: 42px;
   top: 1px;
   font-size: 15px;
   font-weight: bold;

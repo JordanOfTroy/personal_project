@@ -11,7 +11,12 @@ const colors = {
 }
 
 export const Wrapper = styled.section `
-  background: gray;
+  background-image: linear-gradient(
+    -75deg,
+    ${colors.black}, 
+    ${colors.mediumGray} 
+    // ${colors.black}
+    );
   color: ${colors.lightGreen}
   height: 100vh;
   width: 100vww;
@@ -35,7 +40,8 @@ export const Title = styled.h1`
   vertical-align: middle;
   // padding-top: 55px;
   font-weight: bold;
-  font-size: 25px
+  font-size: 25px;
+  text-shadow: 4px 4px 4px ${colors.black}
 `;
 export const Text = styled.h2`
   // background: white;
