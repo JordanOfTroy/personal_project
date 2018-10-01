@@ -11,12 +11,7 @@ const colors = {
 }
 
 export const Wrapper = styled.section `
-  background-image: linear-gradient(
-    -75deg,
-    ${colors.black}, 
-    ${colors.lightGray} 
-    );
-  // color: ${colors.lightGreen}
+  background-color: ${colors.black}
   height: 100vh;
   width: 100vww;
   margin-top: 121px;
@@ -28,18 +23,17 @@ export const Wrapper = styled.section `
 export const Question = styled.div `
   display: flex;
   justify-content: space-around;
-  // background: #A1E88B;
   height: 140px;
+  color: ${colors.lightGreen}
 `
 
 export const Title = styled.h1`
   flex-basis: 30%;
-  // background: gray;
   text-align: center;
   vertical-align: middle;
-  // padding-top: 55px;
   font-weight: bold;
   font-size: 25px;
+  color: ${colors.lightGreen}
   text-shadow: 4px 4px 4px ${colors.black}
 `;
 export const Text = styled.h2`

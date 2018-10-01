@@ -36,8 +36,8 @@ font-family: 'Syncopate', sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient( to bottom,
-   #0E7B11, #090B09
+  background-image: linear-gradient( to right,
+  #38E04B, #38E04B,#090b09,#232723, #232723 
   );
   padding: 9px;
   z-index: 10;
@@ -99,9 +99,9 @@ font-family: 'Syncopate', sans-serif;
 }
 
 .footer {
-  background-color: #50524F;
+  background-color: #232723;
   height: 50px;
-  position: fixed;
+  position: inherit;
   width: 100vw;
   bottom: 0;
 }
