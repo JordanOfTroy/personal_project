@@ -3,7 +3,7 @@ import StripeCheckout from 'react-stripe-checkout'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import {setNumOfCartItems} from '../../ducks/reducer'
-import {Wrapper, Button} from '../../styles'
+import {Wrapper} from '../../styles'
 
 class Cart extends Component {
   constructor(props) {
@@ -74,16 +74,16 @@ class Cart extends Component {
       return (
         <div key = {index} >
           <img src={image} alt=""/>
-          <Button
+          <button
             onClick = {() => this.order66(id)}
-          >X</Button>
+          >X</button>
           <h4>Product ID: {unique_id}</h4>
           <h4>Price: ${cost}</h4>
         </div>
       )
     })
     return (
-      <section>
+      <Wrapper>
         <section>
           {cartItem}
         </section>
@@ -100,7 +100,7 @@ class Cart extends Component {
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
                 amount={((this.state.amount +75)*100)}
             />
-      </section>
+      </Wrapper>
     )
   }
 }

@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import axios from  'axios'
 import {connect} from 'react-redux'
 import {setNumOfCartItems} from '../../ducks/reducer'
+import {Wrapper} from '../../styles'
 
 
 
@@ -60,9 +61,9 @@ class SubType extends Component {
 
 
    return (
-      <div>
+      <Wrapper>
         {individual}
-      </div>
+      </Wrapper>
     ) 
   }
   

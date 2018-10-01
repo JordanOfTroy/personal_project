@@ -48,6 +48,7 @@ font-family: 'Syncopate', sans-serif;
   /* background-color: white; */
   display: flex;
   justify-content: space-between;
+  
 }
 
 
@@ -109,3 +110,24 @@ font-family: 'Syncopate', sans-serif;
   fill: green;
 }
 
+.nb_button {
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  font-family: 'Megrim', cursive;
+  color: #A1E88B;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 5px 5px 5px #090B09;
+  position: relative;
+  top: -4px
+}
+
+.nb_button:hover {
+  position: relative;
+  top: -6px;
+  color: #38E04B;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 10px 10px 3px black, 0 0 60px #A1E88B, 0 0 5px  #8F938E ;
+}

@@ -16,7 +16,7 @@ export const Wrapper = styled.section `
     ${colors.black}, 
     ${colors.lightGray} 
     );
-  color: ${colors.lightGreen}
+  // color: ${colors.lightGreen}
   height: 100vh;
   width: 100vww;
   margin-top: 121px;
@@ -56,4 +56,11 @@ export const Button = styled.button`
    height: 100px;
    width: 250px;
    border-radius; 4px; 
+`;
+
+export const C_div = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 200px
+
 `
