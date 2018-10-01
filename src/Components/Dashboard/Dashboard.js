@@ -38,7 +38,7 @@ export default class Dashboard extends Component {
       autoplay: true,
       autoplaySpeed: 2000,
       centerMode: true,
-      centerPadding: '45vw',
+      centerPadding: '41.5vw',
       pauseOnDotsHover: true,
       pauseOnHover: true,
       arrows: true,
@@ -104,7 +104,7 @@ export default class Dashboard extends Component {
           </div>
         </Slider>
       </div>
-        <section className = 'selection'>
+        <section className = 'dashboardOptions'>
           <div>
             <Link to = {`/type/${1}`} >
               <img 
