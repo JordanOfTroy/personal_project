@@ -92,9 +92,9 @@ class Cart extends Component {
           <h2>Total: ${(amount +75).toFixed(2)}</h2>
         </section>
         <StripeCheckout
-                name="Stripe Demo inc."
-                description="Dolla Dolla Bills"
-                image="http://via.placeholder.com/100x100"
+                name="Serpents Edge"
+                description="Your scaly friends are waiting to see you!"
+                image={require('../../Assets/se_logo.png')}
                 token= {this.onToken}
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
                 amount={((this.state.amount +75)*100)}

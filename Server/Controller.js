@@ -113,7 +113,7 @@ module.exports = {
             amount: amount,
             currency: "usd",
             source: id,
-            description: "Test charge from Travis"
+            description: "Test charge from Serpents Edge"
         },
         (err, charge) => {
             if(err) {
@@ -125,6 +125,7 @@ module.exports = {
             }
         }
     )
+
 },
 
   addToCart: (req, res) => {

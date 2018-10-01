@@ -94,7 +94,7 @@ font-family: 'Syncopate', sans-serif;
   position: relative;
   top: 121px;
   background-color: #8F938E;
-  height: 80vh;
+  height: 100vh;
 }
 
 .footer {
@@ -103,5 +103,9 @@ font-family: 'Syncopate', sans-serif;
   position: fixed;
   width: 100vw;
   bottom: 0;
+}
+
+.logo {
+  fill: green;
 }
 

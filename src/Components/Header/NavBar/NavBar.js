@@ -35,7 +35,8 @@ class NavBar extends Component {
       {
         username 
         ?
-        <a 
+        <a
+          className = 'nav_link nav_text' 
           onClick = {this.logout}
           href = 'http://localhost:3000/#/'
         > Logout </a>     
