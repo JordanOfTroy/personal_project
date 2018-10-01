@@ -30,10 +30,10 @@ export default class Dashboard extends Component {
       dots: true,
       infinite: true,
       speed: 4500,
-      slidesToShow: 2,
-      slidesToScroll: 2,
+      slidesToShow: 1,
+      slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 3000
+      autoplaySpeed: 2000
 
       }
 
@@ -42,25 +42,30 @@ export default class Dashboard extends Component {
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
         <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
         <div>
-        <h2> Single Item</h2>
         <Slider {...settings}>
           <div>
-            <img src={image} alt=""/>
+            <Link to = {`/type/${1}`} >
+              <img 
+              className = 'testImage'
+              src={require('../../Assets/default_img.png')} alt=""/>
+            </Link>
+            <h1>Snakes</h1>
           </div>
           <div>
-            <img src={image} alt=""/>
+            <Link to = {`/type/${2}`} >
+              <img 
+              className = 'testImage'
+              src={require('../../Assets/default_img.png')} alt=""/>
+            </Link>
+            <h1>Lizards</h1>
           </div>
           <div>
-            <img src={image} alt=""/>
-          </div>
-          <div>
-            <img src={image} alt=""/>
-          </div>
-          <div>
-            <img src={image} alt=""/>
-          </div>
-          <div>
-            <img src={image} alt=""/>
+            <Link to = {`/type/${3}`}>
+              <img 
+              className = 'testImage'
+              src={require('../../Assets/default_img.png')} alt=""/>
+            </Link>
+            <h1>Turtles</h1>
           </div>
         </Slider>
       </div>
@@ -95,29 +100,3 @@ export default class Dashboard extends Component {
   }
 }
 
-{/* <Carousel>
-        <div>
-          <Link to = {`/type/${1}`} >
-            <img 
-            className = ' testImage testImageOnCarousel carousel_image'
-            src={require('../../Assets/default_img.png')} alt=""/>
-          </Link>
-          <h1>Snakes</h1>
-        </div>
-        <div>
-          <Link to = {`/type/${2}`} >
-            <img 
-            className = 'testImage testImageOnCarousel carousel_image'
-            src={require('../../Assets/default_img.png')} alt=""/>
-          </Link>
-          <h1>Lizards</h1>
-        </div>
-        <div>
-          <Link to = {`/type/${3}`}>
-            <img 
-            className = 'testImage testImageOnCarousel carousel_image'
-            src={require('../../Assets/default_img.png')} alt=""/>
-          </Link>
-          <h1>Turtles</h1>
-        </div>
-        </Carousel> */}

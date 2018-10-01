@@ -3,6 +3,7 @@ import axios from 'axios'
 import {connect} from 'react-redux'
 import {initialGrab} from '../../ducks/reducer'
 import './Account.css'
+import {Wrapper} from '../../styles'
 
 class Account extends Component {
   constructor (props) {
@@ -79,7 +80,7 @@ class Account extends Component {
   let {email, firstName, lastName, username, editToggle } = this.state
   console.log(this.state)
     return(
-      <div>
+      <Wrapper>
         <section>
           <div>
             <h2>Name: {`${firstName} ${lastName}`}</h2>
@@ -145,7 +146,7 @@ class Account extends Component {
             }
           </div>
         </section>
-        </div>
+        </Wrapper>
     )
   }
 }

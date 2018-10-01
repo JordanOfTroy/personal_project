@@ -14,8 +14,7 @@ export const Wrapper = styled.section `
   background-image: linear-gradient(
     -75deg,
     ${colors.black}, 
-    ${colors.mediumGray} 
-    // ${colors.black}
+    ${colors.lightGray} 
     );
   color: ${colors.lightGreen}
   height: 100vh;
@@ -50,3 +49,11 @@ export const Text = styled.h2`
   // padding-top: 55px;
   font-size: 18px;
 `;
+
+export const Button = styled.button`
+   background-color: black;
+   color: white;
+   height: 100px;
+   width: 250px;
+   border-radius; 4px; 
+`

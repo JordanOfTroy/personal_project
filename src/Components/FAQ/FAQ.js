@@ -1,5 +1,5 @@
 import React from 'react'
-import {Wrapper, Title, Question, Text} from './FAQ_CSS'
+import {Wrapper, Title, Question, Text} from '../../styles'
 
 export default function FAQ () {
   return (
