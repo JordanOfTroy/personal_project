@@ -16,6 +16,7 @@ class NavBar extends Component {
       password:''
     }
     this.openModal = this.openModal.bind(this);
+    this.afterModalOpen = this.afterModalOpen.bind(this)
     this.closeModal = this.closeModal.bind(this);
     this.handleInputFn = this.handleInputFn.bind(this)
     this.login = this.login.bind(this)
@@ -36,10 +37,14 @@ class NavBar extends Component {
     this.props.history.push('/')
   }
 
-
   openModal () {
     this.setState({ modalIsOpen: true })
   }
+
+  afterModalOpen () {
+    this.subtitle.style.color = '#f00'
+  }
+
 
   handleInputFn (e) {
     this.setState({
@@ -72,14 +77,21 @@ class NavBar extends Component {
   let {username, numOfCartItems} = this.props
 
   const customStyles = {
+    // overlay: {
+    //   background: none
+    // },
     content : {
-      top                   : '50%',
-      left                  : '50%',
-      right                 : 'auto',
-      bottom                : 'auto',
-      marginRight           : '-50%',
-      transform             : 'translate(-50%, -50%)'
-    }
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      backgroundColor: '#B1D59A',
+      height: '250px',
+      width: '500px'
+    },
+    
   }
   return (
     <div className = 'nav_bar'>
@@ -136,7 +148,7 @@ class NavBar extends Component {
       onRequestClose={this.closeModal}
       style={customStyles}
       contentLabel="Example Modal"
-    >
+      >
       <button onClick={this.closeModal}>cancel</button>
       <input
         placeholder = 'Username'
@@ -174,16 +186,3 @@ function mapStateToProps (state) {
 export default withRouter(connect (mapStateToProps, {initialGrab, setNumOfCartItems})(NavBar))
 
 
-// {
-//   username 
-//   ?
-//   <a
-//     className = 'nav_link nav_text' 
-//     onClick = {this.logout}
-//     href = 'http://localhost:3000/#/'
-//   > Logout </a>     
-//   :
-//   <Link
-//     className = 'nav_link nav_text'
-//     to = '/login'> login </Link>
-// }
