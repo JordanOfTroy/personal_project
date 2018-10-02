@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import {initialGrab} from '../../ducks/reducer'
-import './Account.css'
 
 class Account extends Component {
   constructor (props) {
@@ -79,7 +78,7 @@ class Account extends Component {
   let {email, firstName, lastName, username, editToggle } = this.state
   console.log(this.state)
     return(
-      <div>
+      <div className = 'main'>
         <section>
           <div>
             <h2>Name: {`${firstName} ${lastName}`}</h2>

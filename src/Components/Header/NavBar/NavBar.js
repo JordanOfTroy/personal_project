@@ -77,9 +77,7 @@ class NavBar extends Component {
   let {username, numOfCartItems} = this.props
 
   const customStyles = {
-    // overlay: {
-    //   background: none
-    // },
+    
     content : {
       top: '50%',
       left: '50%',

@@ -109,3 +109,33 @@ P {
   .dashboard .testImage {
     height: 200px;
     margin-top: 90px; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #B1D59A;
+  position: relative;
+  top: 68px;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 15px; }
+  main div {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center; }
+    main div h1 {
+      width: 30%;
+      font-size: 20px; }
+    main div p {
+      font-size: 15px;
+      width: 60%; }
+
+.main {
+  background-color: #B1D59A;
+  position: relative;
+  top: 60px;
+  width: 100vw;
+  height: 100vh;
+  color: #13120E; }

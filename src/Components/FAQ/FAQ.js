@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function FAQ () {
   return (
-    <div>
+    <main>
       <div>
         <h1>Why does shipping cost so much? </h1>
         <p>
@@ -54,6 +54,6 @@ export default function FAQ () {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos alias odio ipsa delectus optio modi minima quas eveniet totam voluptate animi similique vel, exercitationem minus dolor quod in placeat cupiditate.
         </p>
       </div>
-    </div>
+    </main>
   )
 }
