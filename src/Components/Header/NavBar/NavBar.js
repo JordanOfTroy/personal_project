@@ -91,12 +91,12 @@ class NavBar extends Component {
         username
         ?
         <button
-          className = 'nb_button'
+          className = 'nav_button'
           onClick = {this.logout}
         >Logout</button>
         :
         <button
-          className = 'nb_button'
+          className = 'nav_button'
           onClick = {this.openModal}
         >Login</button>
       }

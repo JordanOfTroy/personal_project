@@ -54,6 +54,27 @@ P {
     .header_display .nav_bar .nav_link {
       color: #13120E;
       font-family: "Megrim", sans-serif;
-      font-weight: bold;
+      font-weight: bolder;
       font-size: 20px;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      text-decoration: none;
+      text-shadow: 4px 4px 5px #13120E; }
+      .header_display .nav_bar .nav_link:hover {
+        color: #5FA952;
+        position: relative;
+        bottom: 3px;
+        text-shadow: 5px 5px 2px #13120E, 0px 0px 1px #13120E; }
+    .header_display .nav_bar .nav_button {
+      background: none;
+      border: none;
+      color: #13120E;
+      font-family: "Megrim", sans-serif;
+      font-weight: bolder;
+      font-size: 20px;
+      text-transform: uppercase;
+      text-shadow: 3px 3px 5px #13120E; }
+      .header_display .nav_bar .nav_button:hover {
+        color: #5FA952;
+        position: relative;
+        bottom: 3px;
+        text-shadow: 5px 5px 2px #13120E, 0px 0px 1px #13120E; }
