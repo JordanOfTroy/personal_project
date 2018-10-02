@@ -1,8 +1,7 @@
 import React, {Component} from 'react' 
 import {Link} from 'react-router-dom'
 import axios from 'axios'
-import './Type.css'
-import {Wrapper} from '../../styles'
+
 export default class Type extends Component{
   constructor(props) {
     super(props)
@@ -39,9 +38,9 @@ export default class Type extends Component{
     })
 
     return (
-      <Wrapper>
+      <div>
         {typeCard}
-      </Wrapper>
+      </div>
     )
   }
 }

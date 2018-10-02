@@ -1,60 +1,59 @@
 import React from 'react'
-import {Wrapper, Title, Question, Text} from '../../styles'
 
 export default function FAQ () {
   return (
-    <Wrapper>
-      <Question>
-        <Title>Why does shipping cost so much? </Title>
-        <Text>
+    <div>
+      <div>
+        <h1>Why does shipping cost so much? </h1>
+        <p>
           Excellent question! As we are shipping live animals, 
           the only method we us is Next-Day Priority shipping. 
           If multiple animals are being sent, we will package
           in the same box for easier shipping.  
-        </Text>
-      </Question>
-      <Question>
-        <Title>How much wood could a woodchuck chuck? </Title>
-        <Text>
+        </p>
+      </div>
+      <div>
+        <h1>How much wood could a woodchuck chuck? </h1>
+        <p>
           A woodchuck would chuck as much wood as a woodchuck could chuck if a woodchuck could chuck wood.
-        </Text>
-      </Question>
-      <Question>
-        <Title> Lorem ipsum dolor sit amet consectetur que? </Title>
-        <Text>
+        </p>
+      </div>
+      <div>
+        <h1> Lorem ipsum dolor sit amet consectetur que? </h1>
+        <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos alias odio ipsa delectus optio modi minima quas eveniet totam voluptate animi similique vel, exercitationem minus dolor quod in placeat cupiditate.
-        </Text>
-      </Question>
-      <Question>
-        <Title> Lorem ipsum dolor sit amet consectetur que? </Title>
-        <Text>
+        </p>
+      </div>
+      <div>
+        <h1> Lorem ipsum dolor sit amet consectetur que? </h1>
+        <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos alias odio ipsa delectus optio modi minima quas eveniet totam voluptate animi similique vel, exercitationem minus dolor quod in placeat cupiditate.
-        </Text>
-      </Question>
-      <Question>
-        <Title> Lorem ipsum dolor sit amet consectetur que? </Title>
-        <Text>
+        </p>
+      </div>
+      <div>
+        <h1> Lorem ipsum dolor sit amet consectetur que? </h1>
+        <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos alias odio ipsa delectus optio modi minima quas eveniet totam voluptate animi similique vel, exercitationem minus dolor quod in placeat cupiditate.
-        </Text>
-      </Question>
-      <Question>
-        <Title> Lorem ipsum dolor sit amet consectetur que? </Title>
-        <Text>
+        </p>
+      </div>
+      <div>
+        <h1> Lorem ipsum dolor sit amet consectetur que? </h1>
+        <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos alias odio ipsa delectus optio modi minima quas eveniet totam voluptate animi similique vel, exercitationem minus dolor quod in placeat cupiditate.
-        </Text>
-      </Question>
-      <Question>
-        <Title> Lorem ipsum dolor sit amet consectetur que? </Title>
-        <Text>
+        </p>
+      </div>
+      <div>
+        <h1> Lorem ipsum dolor sit amet consectetur que? </h1>
+        <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos alias odio ipsa delectus optio modi minima quas eveniet totam voluptate animi similique vel, exercitationem minus dolor quod in placeat cupiditate.
-        </Text>
-      </Question>
-      <Question>
-        <Title> Lorem ipsum dolor sit amet consectetur que? </Title>
-        <Text>
+        </p>
+      </div>
+      <div>
+        <h1> Lorem ipsum dolor sit amet consectetur que? </h1>
+        <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos alias odio ipsa delectus optio modi minima quas eveniet totam voluptate animi similique vel, exercitationem minus dolor quod in placeat cupiditate.
-        </Text>
-      </Question>
-    </Wrapper>
+        </p>
+      </div>
+    </div>
   )
 }

@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import axios from 'axios'
-import Modal_1 from '../Modals/Modal_1/Modal_1'
 import getLoginInfo from '../../ducks/reducer'
 import {connect} from 'react-redux'
 
@@ -66,7 +65,7 @@ class Login extends Component {
         {
           (this.state.modalToggle)
           ?
-            <Modal_1
+            <div
               modalToggleFn = {this.modalToggle}
               handleInputFn = {this.handleInput}
               loginFn = {this.login}

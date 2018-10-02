@@ -1,11 +1,10 @@
 import React from 'react'
-import {Wrapper, Title, Question, Text} from '../../styles'
 
 export default function Clearance () {
   return (
-    <Wrapper>
-      <Title>Clearance Coming Soon!</Title>
-      <Title>Please stay tuned for epic epics of epicness!</Title>
-    </Wrapper>
+    <div>
+      <h1>Clearance Coming Soon!</h1>
+      <h1>Please stay tuned for epic epics of epicness!</h1>
+    </div>
   )
 }

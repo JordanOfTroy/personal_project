@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 import '../../../src/App.css'
 import Slider from 'react-slick'
 import axios from 'axios';
-import {Wrapper, C_div} from '../../styles'
 let image = require('../../Assets/default_img.png')
 
 
@@ -43,12 +42,12 @@ export default class Dashboard extends Component {
       pauseOnHover: true,
       arrows: true,
       adaptiveHeight: true,
-      className: {C_div}
+      className: 'carouselImage'
 
       }
 
       return (
-        <Wrapper>
+        <section>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
         <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
         <div>
@@ -130,7 +129,7 @@ export default class Dashboard extends Component {
             <h1>Turtles</h1>
           </div>
         </section>
-      </Wrapper>
+      </section>
     )
   }
 }
