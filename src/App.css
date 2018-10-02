@@ -20,7 +20,10 @@ font-family: 'Syncopate', sans-serif;
   height: auto;
   border-radius: 9px;
   border: #8F938E solid 1px;
+}
 
+.testImage:hover {
+  transform: scale(1.05)
 }
 
 .selection {
@@ -92,6 +95,9 @@ font-family: 'Syncopate', sans-serif;
   top: 1px;
   font-size: 15px;
   font-weight: bold;
+  color: #A1E88B;
+  font-family: 'megrim';
+  
 }
 
 .wrapper {
@@ -128,7 +134,7 @@ font-family: 'Syncopate', sans-serif;
 
 .nb_button:hover {
   position: relative;
-  top: -6px;
+  top: -7px;
   color: #38E04B;
   font-size: 20px;
   font-weight: bold;
