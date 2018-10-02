@@ -10,7 +10,6 @@
 BODY {
   min-height: 100vh;
   width: 100%;
-  overflow: hidden;
   background: #EFF0D1;
   font-family: "Josefin Sans", sans-serif; }
 
@@ -41,9 +40,14 @@ P {
   align-items: center;
   background-color: #367335;
   width: 100vw;
-  height: 80px; }
+  height: 9vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10; }
   .header_display .logo {
-    width: 60px; }
+    width: 60px;
+    padding: 3px; }
   .header_display .nav_bar {
     display: flex;
     align-items: center;
@@ -78,3 +82,30 @@ P {
         position: relative;
         bottom: 3px;
         text-shadow: 5px 5px 2px #13120E, 0px 0px 1px #13120E; }
+
+.carousel {
+  background-color: #B1D59A;
+  display: flex;
+  justify-items: center;
+  color: #13120E;
+  position: relative;
+  top: 68px;
+  height: 50vh; }
+  .carousel div {
+    display: flex;
+    flex-direction: row; }
+  .carousel .testImage {
+    height: 325px;
+    border: solid #13120E 1px;
+    border-radius: 100%;
+    margin-top: 15px; }
+
+.dashboard {
+  background-color: #B1D59A;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: space-around; }
+  .dashboard .testImage {
+    height: 200px;
+    margin-top: 90px; }

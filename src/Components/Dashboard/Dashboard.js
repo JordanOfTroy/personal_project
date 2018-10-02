@@ -32,10 +32,10 @@ export default class Dashboard extends Component {
       dots: false,
       infinite: true,
       speed: 2500,
-      slidesToShow: 1,
+      slidesToShow: 3,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 5000,
       centerMode: true,
       centerPadding: '41.5vw',
       pauseOnDotsHover: true,
@@ -51,7 +51,7 @@ export default class Dashboard extends Component {
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
         <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
         <div>
-        <Slider {...settings}>
+        <Slider {...settings} className = 'carousel'>
          
           <div>
             <Link to = {`/type/${1}`} >
@@ -103,7 +103,7 @@ export default class Dashboard extends Component {
           </div>
         </Slider>
       </div>
-        <section className = 'dashboardOptions'>
+        <section className = 'dashboard'>
           <div>
             <Link to = {`/type/${1}`} >
               <img 
