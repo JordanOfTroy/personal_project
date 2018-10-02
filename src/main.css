@@ -138,4 +138,8 @@ main {
   top: 60px;
   width: 100vw;
   height: 100vh;
-  color: #13120E; }
+  color: #13120E;
+  display: flex; }
+
+h2 {
+  font-size: 25px; }

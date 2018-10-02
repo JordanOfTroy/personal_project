@@ -79,6 +79,7 @@ class Account extends Component {
   console.log(this.state)
     return(
       <div className = 'main'>
+        <div className = 'left'>
         <section>
           <div>
             <h2>Name: {`${firstName} ${lastName}`}</h2>
@@ -145,6 +146,13 @@ class Account extends Component {
           </div>
         </section>
         </div>
+        <div classdName = 'right'>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non hic quas voluptatum dignissimos, ad sequi ipsam placeat, iure sint ullam incidunt nesciunt magnam odit sed quam dolor ex voluptates ratione!
+            Sunt nihil mollitia voluptas, voluptates nostrum minus ad eos? A ad tempore, asperiores hic quam eveniet, eum reiciendis minima nulla officiis blanditiis at laudantium? Exercitationem minus molestiae architecto perferendis omnis.
+            Sapiente, modi assumenda! Deleniti sunt quidem incidunt? Ratione, harum voluptate eum maiores quasi in expedita ad officia temporibus vero aspernatur maxime? Ratione delectus pariatur inventore minima deleniti reiciendis impedit cum?
+            </h2>
+        </div>
+      </div>
     )
   }
 }
