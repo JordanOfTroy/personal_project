@@ -1,0 +1,6 @@
+.header_display {
+  display: flex;
+  width: 100vw;
+  height: 200px; }
+  .header_display .logo {
+    width: 80px; }
