@@ -86,12 +86,11 @@ class Cart extends Component {
         <section className = 'cart_section'>
           {cartItem}
         </section>
-        <section>
+        <section className = 'info_section'>
           <h2>Sub Total: ${subTotal.toFixed(2)}</h2>
           <h2>Shipping: $75.00</h2>
           <h2>Total: ${(amount +75).toFixed(2)}</h2>
-        </section>
-        <StripeCheckout
+          <StripeCheckout
                 name="Serpents Edge"
                 description="Your scaly friends are waiting to see you!"
                 image={require('../../Assets/se_logo.png')}
@@ -99,6 +98,7 @@ class Cart extends Component {
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
                 amount={((this.state.amount +75)*100)}
             />
+        </section>
       </section>
     )
   }

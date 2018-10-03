@@ -15,9 +15,9 @@ export default function Footer () {
       </div>
       <div>
         <ul className = 'link_list'>
-          <li className = 'link'><Link to = {`/subtype/${1}`} >Snakes</Link></li>
-          <li className = 'link'><Link to = {`/subtype/${2}`} >Lizards</Link></li>
-          <li className = 'link'><Link to = {`/subtype/${3}`} >Turtles</Link></li>
+          <li className = 'link'><Link to = {`/type/${1}`} >Snakes</Link></li>
+          <li className = 'link'><Link to = {`/type/${2}`} >Lizards</Link></li>
+          <li className = 'link'><Link to = {`/type/${3}`} >Turtles</Link></li>
           <li className = 'link'><Link to = '/about'>About</Link></li>
         </ul>
       </div>
