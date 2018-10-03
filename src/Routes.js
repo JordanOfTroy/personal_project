@@ -9,6 +9,7 @@ import Type from './Components/Type/Type'
 import Account from './Components/Account/Account'
 import Register from './Components/Register/Register'
 import Cart from './Components/Cart/Cart'
+import About from './Components/About/About'
 
 
 export default (
@@ -22,6 +23,7 @@ export default (
     <Route path = '/account' component = {Account} />
     <Route path = '/register' component = {Register}/>
     <Route path = '/cart' component = {Cart} />
+    <Route path = '/about' component = {About} />
     {/* <Route path = '/logout' component = {Dashboard} /> */}
   </Switch>
 )
