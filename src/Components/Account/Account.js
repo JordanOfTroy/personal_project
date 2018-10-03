@@ -80,77 +80,71 @@ class Account extends Component {
     return(
       <div className = 'main'>
         <div className = 'left'>
-        <section>
-          <div>
-            <h2>Name: {`${firstName} ${lastName}`}</h2>
-          {
-            editToggle 
-            &&
-            <input
-              value = {firstName}
-              placeholder = {firstName}
-              onChange = {this.handleChange}
-              name = 'firstName' 
-              type="text"/>
-          }
-          {
-            editToggle
-            &&
-            <input
-              value = {lastName}
-              placeholder = {lastName}
-              onChange = {this.handleChange}
-              name = 'lastName' 
-              type="text"/>
-          }
-          </div>
-          <div>
-            <h2>Username: {username}</h2>
+          <section>
+            <div>
+              <h2>Name: {`${firstName} ${lastName}`}</h2>
+            {
+              editToggle 
+              &&
+              <input
+                value = {firstName}
+                placeholder = {firstName}
+                onChange = {this.handleChange}
+                name = 'firstName' 
+                type="text"/>
+            }
             {
               editToggle
               &&
               <input
-                value = {username}
-                placeholder = {username}
+                value = {lastName}
+                placeholder = {lastName}
                 onChange = {this.handleChange}
-                name = 'username'
+                name = 'lastName' 
                 type="text"/>
             }
-          </div>
-          <div>
-            <h2>Email: {email}</h2>
-            {
-              editToggle
-              &&
-              <input
-                value = {email}
-                placeholder = {email}
-                onChange = {this.handleChange}
-                name = 'email' 
-                type="text"/>
-            }
-          </div>
-        </section>
-        <section>
-          <div>
-            {
-              !editToggle ? 
-              <button
-                onClick = {this.handleEdit}
-              >Edit</button> 
-              :
-              <button
-                onClick = {this.handleSave}
-              >Save</button>
-            }
-          </div>
-        </section>
-        </div>
-        <div classdName = 'right'>
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non hic quas voluptatum dignissimos, ad sequi ipsam placeat, iure sint ullam incidunt nesciunt magnam odit sed quam dolor ex voluptates ratione!
-            Sunt nihil mollitia voluptas, voluptates nostrum minus ad eos? A ad tempore, asperiores hic quam eveniet, eum reiciendis minima nulla officiis blanditiis at laudantium? Exercitationem minus molestiae architecto perferendis omnis.
-            Sapiente, modi assumenda! Deleniti sunt quidem incidunt? Ratione, harum voluptate eum maiores quasi in expedita ad officia temporibus vero aspernatur maxime? Ratione delectus pariatur inventore minima deleniti reiciendis impedit cum?
-            </h2>
+            </div>
+            <div>
+              <h2>Username: {username}</h2>
+              {
+                editToggle
+                &&
+                <input
+                  value = {username}
+                  placeholder = {username}
+                  onChange = {this.handleChange}
+                  name = 'username'
+                  type="text"/>
+              }
+            </div>
+            <div>
+              <h2>Email: {email}</h2>
+              {
+                editToggle
+                &&
+                <input
+                  value = {email}
+                  placeholder = {email}
+                  onChange = {this.handleChange}
+                  name = 'email' 
+                  type="text"/>
+              }
+            </div>
+          </section>
+          <section>
+            <div>
+              {
+                !editToggle ? 
+                <button
+                  onClick = {this.handleEdit}
+                >Edit</button> 
+                :
+                <button
+                  onClick = {this.handleSave}
+                >Save</button>
+              }
+            </div>
+          </section>
         </div>
       </div>
     )

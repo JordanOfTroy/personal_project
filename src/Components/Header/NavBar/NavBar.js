@@ -12,8 +12,13 @@ class NavBar extends Component {
 
     this.state = {
       modalIsOpen: false,
+      registerToggle: false,
       username: '',
-      password:''
+      password:'',
+      firstName: '',
+      lastName: '',
+      email: ''
+      
     }
     this.openModal = this.openModal.bind(this);
     this.afterModalOpen = this.afterModalOpen.bind(this)
@@ -21,6 +26,8 @@ class NavBar extends Component {
     this.handleInputFn = this.handleInputFn.bind(this)
     this.login = this.login.bind(this)
     this.logout = this.logout.bind(this)
+    this.register = this.register.bind(this)
+    this.createAccount = this.createAccount.bind(this)
   }
 
   componentDidMount () {
@@ -35,6 +42,37 @@ class NavBar extends Component {
     axios.get('/logout')
     this.props.initialGrab({})
     this.props.history.push('/')
+  }
+
+  register () {
+    if (this.state.register) {
+      this.setState({registerToggle: false})
+    } else {
+      this.setState({registerToggle: true})
+    }
+  }
+
+  createAccount () {
+     // console.log('i werk')
+     let {username, password, firstName, lastName, email, image} = this.state
+     axios.post(`/api/register`, {
+       username: username.toLocaleLowerCase(),
+       password: password,
+       firstname: firstName,
+       lastname: lastName,
+       firstname: firstName,
+       lastname: lastName,
+       email: email,
+       image: image
+     }).then((res) => {
+       // console.log(res.data)
+       if (res.data === 'Username taken. Please try again.') {
+         alert(res.data)
+       } else {
+         this.props.history.push(`/account`)
+         this.closeModal()
+       }
+     })
   }
 
   openModal () {
@@ -94,7 +132,7 @@ class NavBar extends Component {
   return (
     <div className = 'nav_bar'>
       <Link
-        className = 'nav_link nav_text'
+        className = 'nav_link'
         to = '/'> Shop </Link>
     
       {
@@ -112,22 +150,22 @@ class NavBar extends Component {
       }
       
       <Link
-        className = 'nav_link nav_text'
+        className = 'nav_link'
         to = '/faq'> FAQ's </Link>
       <Link
-        className = 'nav_link nav_text'
+        className = 'nav_link'
         to = '/clearance'> Clearance </Link>
       {
         username
         &&
         <Link
-          className = 'nav_link nav_text'
+          className = 'nav_link'
           to = '/account'> Account </Link>
       }
         
       <Link
         id = 'cart_svg'
-        // className = 'nav_link'
+        className = 'nav_link'
         to = '/cart'>
         <img 
           id = 'svgImg'
@@ -148,7 +186,8 @@ class NavBar extends Component {
       contentLabel="Example Modal"
       >
       <button onClick={this.closeModal}>cancel</button>
-      <input
+      <div>
+        <input
         placeholder = 'Username'
         name = 'username'
         value = {this.state.username}
@@ -160,11 +199,52 @@ class NavBar extends Component {
         value = {this.state.password}
         onChange = {this.handleInputFn}
         type="text"/>
+        {
+          this.state.registerToggle
+          &&
+          <input
+            placeholder = 'firstName'
+            name = 'firstName'
+            value = {this.state.firstName}
+            onChange = {this.handleInputFn}
+            type="text"/>
+        }
+         {
+          this.state.registerToggle
+          &&
+          <input
+            placeholder = 'lastName'
+            name = 'lastName'
+            value = {this.state.lastName}
+            onChange = {this.handleInputFn}
+            type="text"/>
+        }
+         {
+          this.state.registerToggle
+          &&
+          <input
+            placeholder = 'email'
+            name = 'email'
+            value = {this.state.email}
+            onChange = {this.handleInputFn}
+            type="text"/>
+        }
+      </div>
+      
       <button
         onClick = {this.login}
       >Login</button>
-      <button>Register</button>
-          
+      {
+        this.state.registerToggle
+        ?
+        <button
+        onClick = {this.createAccount}
+        >Create Account</button>
+        :
+        <button
+          onClick = {this.register}
+        >Register</button>
+      }
     </Modal>
       
     </div>
