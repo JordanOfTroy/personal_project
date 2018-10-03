@@ -106,7 +106,7 @@ export default class Dashboard extends Component {
         <section className = 'dashboard'>
           <div className = 'dashboard_text_column'>
             <h1>
-              Lorem ipsum dolor sit amet.
+              Why Reptiles Make The Best Pets.
             </h1>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam neque quidem nesciunt optio a nihil perspiciatis rerum repellendus natus. Consequuntur maiores quia eligendi ea ratione velit animi iure porro. Laborum.
@@ -120,7 +120,7 @@ export default class Dashboard extends Component {
           </div>
           <div className = 'dashboard_text_column'>
             <h1>
-              Lorem ipsum dolor sit amet.
+              What Pet Reptile Is Right For Me?
             </h1>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam neque quidem nesciunt optio a nihil perspiciatis rerum repellendus natus. Consequuntur maiores quia eligendi ea ratione velit animi iure porro. Laborum.
@@ -134,7 +134,7 @@ export default class Dashboard extends Component {
           </div>
           <div className = 'dashboard_text_column'>
             <h1>
-              Lorem ipsum dolor sit amet.
+              Responsible Pet Ownership.
             </h1>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam neque quidem nesciunt optio a nihil perspiciatis rerum repellendus natus. Consequuntur maiores quia eligendi ea ratione velit animi iure porro. Laborum.

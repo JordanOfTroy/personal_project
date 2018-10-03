@@ -154,7 +154,7 @@ class NavBar extends Component {
         to = '/faq'> FAQ's </Link>
       <Link
         className = 'nav_link'
-        to = '/clearance'> Clearance </Link>
+        to = '/about'> About </Link>
       {
         username
         &&
