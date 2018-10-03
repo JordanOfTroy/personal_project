@@ -71,22 +71,27 @@ class Cart extends Component {
     let cartItem = displays.map((display, index) => {
       let {cost, unique_id, image, id} = display
       return (
-        <div className = 'item' key = {index} >
-          <img src={image} alt=""/>
-          <button
-            onClick = {() => this.order66(id)}
-          >X</button>
-          <h4>Product ID: {unique_id}</h4>
-          <h4>Price: ${cost}</h4>
+        <div>
+          <div className = 'item' key = {index} >
+            <img src={image} alt=""/>
+            <button
+              onClick = {() => this.order66(id)}
+            >X</button>
+            <h4>Product ID: {unique_id}</h4>
+            <h4>Price: ${cost}</h4>
+          </div>
+          <hr/>
         </div>
+        
       )
     })
     return (
       <section className = 'cart_wrapper'>
-        <section className = 'cart_section'>
+        <section className = 'cart cart_section'>
+          <h1>Cart Items</h1>
           {cartItem}
         </section>
-        <section className = 'info_section'>
+        <section className = 'cart info_section'>
           <h2>Sub Total: ${subTotal.toFixed(2)}</h2>
           <h2>Shipping: $75.00</h2>
           <h2>Total: ${(amount +75).toFixed(2)}</h2>
