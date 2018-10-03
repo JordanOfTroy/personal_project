@@ -71,7 +71,7 @@ class Cart extends Component {
     let cartItem = displays.map((display, index) => {
       let {cost, unique_id, image, id} = display
       return (
-        <div key = {index} >
+        <div className = 'item' key = {index} >
           <img src={image} alt=""/>
           <button
             onClick = {() => this.order66(id)}
@@ -82,8 +82,8 @@ class Cart extends Component {
       )
     })
     return (
-      <section>
-        <section>
+      <section className = 'cart_wrapper'>
+        <section className = 'cart_section'>
           {cartItem}
         </section>
         <section>

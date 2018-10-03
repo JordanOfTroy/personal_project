@@ -35,7 +35,7 @@ export default class Dashboard extends Component {
       slidesToShow: 3,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 3000,
       centerMode: true,
       centerPadding: '41.5vw',
       pauseOnDotsHover: true,
@@ -47,7 +47,7 @@ export default class Dashboard extends Component {
       }
 
       return (
-        <section>
+        <section className = 'dashboard_wrapper'>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
         <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
         <div>
@@ -57,7 +57,7 @@ export default class Dashboard extends Component {
             <Link to = {`/type/${1}`} >
               <img 
               className = 'testImage'
-              src={require('../../Assets/default_img.png')} alt=""/>
+              src='https://s3-us-west-1.amazonaws.com/serpents-edge.images/main+images/Snake_Main.jpg' alt=""/>
             </Link>
             <h1>Snakes</h1>
           </div>
@@ -65,7 +65,7 @@ export default class Dashboard extends Component {
             <Link to = {`/type/${2}`} >
               <img 
               className = 'testImage'
-              src={require('../../Assets/default_img.png')} alt=""/>
+              src='https://s3-us-west-1.amazonaws.com/serpents-edge.images/main+images/Lizard_Main.jpg' alt=""/>
             </Link>
             <h1>Lizards</h1>
           </div>
@@ -73,7 +73,7 @@ export default class Dashboard extends Component {
             <Link to = {`/type/${3}`}>
               <img 
               className = 'testImage'
-              src={require('../../Assets/default_img.png')} alt=""/>
+              src='https://s3-us-west-1.amazonaws.com/serpents-edge.images/main+images/Turtle_Main.jpg' alt=""/>
             </Link>
             <h1>Turtles</h1>
           </div>
@@ -81,7 +81,7 @@ export default class Dashboard extends Component {
             <Link to = {`/type/${1}`} >
               <img 
               className = 'testImage'
-              src={require('../../Assets/default_img.png')} alt=""/>
+              src='https://s3-us-west-1.amazonaws.com/serpents-edge.images/main+images/Snake_Main.jpg' alt=""/>
             </Link>
             <h1>Snakes</h1>
           </div>
@@ -89,7 +89,7 @@ export default class Dashboard extends Component {
             <Link to = {`/type/${2}`} >
               <img 
               className = 'testImage'
-              src={require('../../Assets/default_img.png')} alt=""/>
+              src='https://s3-us-west-1.amazonaws.com/serpents-edge.images/main+images/Lizard_Main.jpg' alt=""/>
             </Link>
             <h1>Lizards</h1>
           </div>
@@ -97,7 +97,7 @@ export default class Dashboard extends Component {
             <Link to = {`/type/${3}`}>
               <img 
               className = 'testImage'
-              src={require('../../Assets/default_img.png')} alt=""/>
+              src='https://s3-us-west-1.amazonaws.com/serpents-edge.images/main+images/Turtle_Main.jpg' alt=""/>
             </Link>
             <h1>Turtles</h1>
           </div>

@@ -228,6 +228,9 @@ h2 {
     margin: 0px 30px;
     list-style: none; }
 
+.dashboard_wrapper {
+  height: 100vh; }
+
 .type_wrapper {
   display: flex;
   justify-content: center;
@@ -270,3 +273,23 @@ h2 {
     background-color: #367335;
     color: #F0F6E5;
     box-shadow: 0px 0px 10px #13120E; }
+
+.cart_wrapper {
+  background-color: #B1D59A;
+  position: relative;
+  top: 63px;
+  height: 91vh; }
+
+.cart_section {
+  background-color: #5FA952;
+  display: flex;
+  justify-content: center;
+  align-content: spac;
+  position: relative;
+  top: 20px;
+  height: 50vh; }
+  .cart_section .item {
+    background-color: lightblue;
+    margin: 10px;
+    display: flex;
+    flex-direction: column; }
