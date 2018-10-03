@@ -168,9 +168,6 @@ main {
   color: #13120E;
   display: flex;
   justify-content: center; }
-  .main section {
-    position: relative;
-    top: 30px; }
   .main button {
     background-color: #5FA952;
     color: #DEECC5;
