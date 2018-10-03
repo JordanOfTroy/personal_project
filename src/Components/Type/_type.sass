@@ -1,0 +1,30 @@
+.type_wrapper
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $light-green
+  position: relative
+  top: 68px
+  height: 91vh
+
+  img 
+    width: 500px
+    border: solid 1px $black
+    border-radius: 5%
+    background-color: $light-white
+    &:hover
+      transition: .4s
+      transform: scale(1.03)
+      box-shadow: 0px 0px 15px $dark-white, 0px 0px 50px $dark-green
+  
+.type_main
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: 20px
+  h4 
+    font-family: $megrim
+    font-weight: bolder
+    letter-spacing: 1px
+    color: $black
+    font-size: 18px

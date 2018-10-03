@@ -28,7 +28,7 @@ export default class Type extends Component{
       // console.log('LOOK AT ME',id)
     
       return (
-        <div key = {index}>
+        <div className = 'type_main' key = {index}>
           <Link to = {`/subtype/${id}`} >
             <img src={image_url} alt={common_name}/>
           </Link>
@@ -38,7 +38,7 @@ export default class Type extends Component{
     })
 
     return (
-      <div>
+      <div className = 'type_wrapper'>
         {typeCard}
       </div>
     )

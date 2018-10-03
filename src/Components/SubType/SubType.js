@@ -39,7 +39,7 @@ class SubType extends Component {
     let individual = displays.map((display, index) => {
       let {cost, hatch_date, unique_id, gender, image, id} = display
       return (
-        <div key = {index}>
+        <div className = 'type_main' key = {index}>
           <div>
             <img src={image} alt="available individual"/>
           </div>
@@ -51,6 +51,7 @@ class SubType extends Component {
           </div>
           <div>
             <button
+              className = 'add_button'
               onClick = {() => this.addToCart(id)}
             >Add To Cart</button>
           </div>
@@ -60,7 +61,7 @@ class SubType extends Component {
 
 
    return (
-      <div>
+      <div class = 'type_wrapper'>
         {individual}
       </div>
     ) 

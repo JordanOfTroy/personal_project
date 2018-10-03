@@ -162,22 +162,26 @@ class NavBar extends Component {
           className = 'nav_link'
           to = '/account'> Account </Link>
       }
-        
+      {
+        username
+        &&
       <Link
         id = 'cart_svg'
-        className = 'nav_link'
         to = '/cart'>
         <img 
           id = 'svgImg'
           src={cartImage} 
           alt=""
-        /> 
-
-     </Link>
+        />
+      </Link>
+    } 
+    {
+      username
+      &&
      <h6
       className = 'cart_indicator'
      >{numOfCartItems}</h6>
-    
+    }
     <Modal
       isOpen={this.state.modalIsOpen}
       onAfterOpen={this.afterOpenModal}

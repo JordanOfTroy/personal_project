@@ -5,8 +5,8 @@ export default function Footer () {
   return (
     <div className = 'footer'>
       <div>
-        <h4>Contact</h4>
-        <ul>
+        {/* <h4>Contact</h4> */}
+        <ul className = 'contact_info'>
           <li>Local: 801-555-1234</li>
           <li>Collect: 800-555-1234</li>
           <li>Email: customer_support@serpentsedge.com</li>
@@ -14,11 +14,11 @@ export default function Footer () {
         </ul>
       </div>
       <div>
-        <ul>
-          <li><Link to = {`/subtype/${1}`} >Snakes</Link></li>
-          <li><Link to = {`/subtype/${2}`} >Lizards</Link></li>
-          <li><Link to = {`/subtype/${3}`} >Turtles</Link></li>
-          <li><Link to = '/about'>About</Link></li>
+        <ul className = 'link_list'>
+          <li className = 'link'><Link to = {`/subtype/${1}`} >Snakes</Link></li>
+          <li className = 'link'><Link to = {`/subtype/${2}`} >Lizards</Link></li>
+          <li className = 'link'><Link to = {`/subtype/${3}`} >Turtles</Link></li>
+          <li className = 'link'><Link to = '/about'>About</Link></li>
         </ul>
       </div>
     </div>

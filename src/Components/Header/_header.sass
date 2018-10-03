@@ -2,13 +2,14 @@
     display: flex
     justify-content: space-between
     align-items: center
-    background-color: $dark-green
+    background-image: linear-gradient(to bottom, $dark-green, $light-green)
     width: 100vw
     height: 9vh
     position: fixed
     top: 0
     left: 0
     z-index: 10
+    border-bottom: solid 1px $dark-white
     .logo
       width: 60px
       padding: 3px
@@ -16,9 +17,10 @@
       display: flex
       align-items: center
       height: 25px
-      width: 450px
+      width: 575px
       justify-content: space-between
       margin-right: 45px
+      letter-spacing: 2px
       .nav_link
         color: $black
         font-family: $megrim
@@ -62,8 +64,15 @@
 
 .cart_indicator
   position: relative
-  right: 51px
+  right: 28px
   bottom: 2px
+
+#top_logo
+  font-family: $megrim
+  font-weight: bolder
+  color: $black
+  letter-spacing: 2px
+  text-decoration: none
 
     
 
