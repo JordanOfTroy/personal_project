@@ -7,7 +7,6 @@ class About extends Component {
     return (
       <div className = 'about_main'>
         <section>
-          <h1>This is the about page</h1>
           <div>
             <h2>
               Lorem ipsum dolor sit amet.

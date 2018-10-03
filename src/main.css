@@ -62,7 +62,7 @@ P {
       font-size: 20px;
       text-transform: uppercase;
       text-decoration: none;
-      text-shadow: 4px 4px 5px #13120E; }
+      text-shadow: 4px 4px 9px #13120E; }
       .header_display .nav_bar .nav_link:hover {
         color: #B1D59A;
         position: relative;
@@ -82,6 +82,16 @@ P {
         position: relative;
         bottom: 3px;
         text-shadow: 5px 5px 2px #13120E, 0px 0px 1px #13120E; }
+
+#cart_svg {
+  z-index: 20;
+  height: 40px;
+  width: 40px; }
+
+.cart_indicator {
+  position: relative;
+  right: 51px;
+  bottom: 2px; }
 
 .carousel {
   background-color: #B1D59A;
@@ -172,3 +182,10 @@ h2 {
   .clearance_main h1 {
     color: #13120E;
     padding-top: 75px; }
+
+.about_main {
+  position: relative;
+  top: 68px;
+  display: flex;
+  background-color: #B1D59A;
+  height: 91vh; }
