@@ -104,7 +104,31 @@ export default class Dashboard extends Component {
         </Slider>
       </div>
         <section className = 'dashboard'>
-          <div>
+          <div className = 'dashboard_text_column'>
+            <h1>
+              Lorem ipsum dolor sit amet.
+            </h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam neque quidem nesciunt optio a nihil perspiciatis rerum repellendus natus. Consequuntur maiores quia eligendi ea ratione velit animi iure porro. Laborum.
+            </p>
+          </div>
+          <div className = 'dashboard_text_column'>
+            <h1>
+              Lorem ipsum dolor sit amet.
+            </h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam neque quidem nesciunt optio a nihil perspiciatis rerum repellendus natus. Consequuntur maiores quia eligendi ea ratione velit animi iure porro. Laborum.
+            </p>
+          </div>
+          <div className = 'dashboard_text_column'>
+            <h1>
+              Lorem ipsum dolor sit amet.
+            </h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam neque quidem nesciunt optio a nihil perspiciatis rerum repellendus natus. Consequuntur maiores quia eligendi ea ratione velit animi iure porro. Laborum.
+            </p>
+          </div>
+          {/* <div>
             <Link to = {`/type/${1}`} >
               <img 
               className = 'testImage'
@@ -127,7 +151,7 @@ export default class Dashboard extends Component {
               src={require('../../Assets/default_img.png')} alt=""/>
             </Link>
             <h1>Turtles</h1>
-          </div>
+          </div> */}
         </section>
       </section>
     )

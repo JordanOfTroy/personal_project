@@ -105,20 +105,16 @@ P {
 .carousel {
   background-color: #B1D59A;
   display: flex;
-  justify-items: center;
   color: #13120E;
   position: relative;
   top: 68px;
   height: 53vh;
   width: 100vw; }
-  .carousel div {
-    display: flex;
-    flex-direction: row; }
   .carousel .testImage {
     height: 325px;
     border: solid #13120E 1px;
-    border-radius: 100%;
-    margin-top: 15px; }
+    border-radius: 5%;
+    margin-top: 25px; }
 
 .dashboard {
   background-color: #B1D59A;
@@ -126,7 +122,7 @@ P {
   height: 50vh;
   display: flex;
   justify-content: space-around; }
-  .dashboard .testImage {
+  .dashboard .dashboard_tex_column {
     height: 200px;
     margin-top: 90px; }
 
