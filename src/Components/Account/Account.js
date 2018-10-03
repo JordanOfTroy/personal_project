@@ -12,7 +12,7 @@ class Account extends Component {
       firstName: '',
       lastName: '',
       username: '',
-      editToggle: false,
+      editToggle: true,
       id: 0
     }
     this.handleEdit = this.handleEdit.bind(this)
@@ -81,7 +81,7 @@ class Account extends Component {
       <div className = 'main'>
         <div className = 'left'>
           <section>
-            <div>
+            <section>
               <h2>Name: {`${firstName} ${lastName}`}</h2>
             {
               editToggle 
@@ -103,7 +103,7 @@ class Account extends Component {
                 name = 'lastName' 
                 type="text"/>
             }
-            </div>
+            </section>
             <div>
               <h2>Username: {username}</h2>
               {

@@ -167,7 +167,14 @@ main {
   width: 100vw;
   height: 100vh;
   color: #13120E;
-  display: flex; }
+  display: flex;
+  justify-content: center; }
+  .main input {
+    height: 25px;
+    margin-right: 10px;
+    position: relative;
+    left: 25px;
+    box-shadow: 3px 3px 7px #13120E; }
   .main button {
     background-color: #5FA952;
     color: #DEECC5;
