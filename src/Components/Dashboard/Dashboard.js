@@ -111,13 +111,11 @@ export default class Dashboard extends Component {
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam neque quidem nesciunt optio a nihil perspiciatis rerum repellendus natus. Consequuntur maiores quia eligendi ea ratione velit animi iure porro. Laborum.
             </p>
-          </div>
-          <div className = 'dashboard_text_column'>
-            <h1>
-              Lorem ipsum dolor sit amet.
-            </h1>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam neque quidem nesciunt optio a nihil perspiciatis rerum repellendus natus. Consequuntur maiores quia eligendi ea ratione velit animi iure porro. Laborum.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ea, quibusdam veniam qui vitae quo, soluta alias dignissimos at architecto ipsa quasi? Nihil totam, sunt ea eius quibusdam quis beatae.Provident natus reiciendis tempore iure vero necessitatibus aliquid possimus sapiente quis, earum incidunt laudantium culpa quo magnam quaerat, dolores, recusandae voluptatem! Nam id, temporibus cumque est aperiam adipisci itaque. Eligendi!
+            </p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et rem cumque illo earum recusandae, omnis deleniti quidem quod corrupti accusantium. Corporis harum earum suscipit veniam quasi aspernatur deserunt, quidem repudiandae?
             </p>
           </div>
           <div className = 'dashboard_text_column'>
@@ -126,6 +124,26 @@ export default class Dashboard extends Component {
             </h1>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam neque quidem nesciunt optio a nihil perspiciatis rerum repellendus natus. Consequuntur maiores quia eligendi ea ratione velit animi iure porro. Laborum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ea, quibusdam veniam qui vitae quo, soluta alias dignissimos at architecto ipsa quasi? Nihil totam, sunt ea eius quibusdam quis beatae.Provident natus reiciendis tempore iure vero necessitatibus aliquid possimus sapiente quis, earum incidunt laudantium culpa quo magnam quaerat, dolores, recusandae voluptatem! Nam id, temporibus cumque est aperiam adipisci itaque. Eligendi!
+            </p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et rem cumque illo earum recusandae, omnis deleniti quidem quod corrupti accusantium. Corporis harum earum suscipit veniam quasi aspernatur deserunt, quidem repudiandae?
+            </p>
+          </div>
+          <div className = 'dashboard_text_column'>
+            <h1>
+              Lorem ipsum dolor sit amet.
+            </h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam neque quidem nesciunt optio a nihil perspiciatis rerum repellendus natus. Consequuntur maiores quia eligendi ea ratione velit animi iure porro. Laborum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ea, quibusdam veniam qui vitae quo, soluta alias dignissimos at architecto ipsa quasi? Nihil totam, sunt ea eius quibusdam quis beatae.Provident natus reiciendis tempore iure vero necessitatibus aliquid possimus sapiente quis, earum incidunt laudantium culpa quo magnam quaerat, dolores, recusandae voluptatem! Nam id, temporibus cumque est aperiam adipisci itaque. Eligendi!
+            </p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et rem cumque illo earum recusandae, omnis deleniti quidem quod corrupti accusantium. Corporis harum earum suscipit veniam quasi aspernatur deserunt, quidem repudiandae?
             </p>
           </div>
           {/* <div>
