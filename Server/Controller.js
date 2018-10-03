@@ -202,7 +202,9 @@ module.exports = {
     from: 'customer_support@serpentsedge.com',
     to: 'jordantroysmithson@gmail.com',
     subject: 'Order Confirmation',
-    html: `<h1>Dear ${first_name} ${last_name},</h1><h1>Serpents Edge would like to thank you for your recent purchase.</h1>`
+    html: `<h1>Dear ${first_name} ${last_name},</h1>
+    <h1>Serpents Edge would like to thank you for your recent purchase.</h1>
+    <h1>Your new friend will be shipped in the morning!</h1>`
     // text: 'Thank you for your purchase form SerpentsEdge.com.'
   }
 

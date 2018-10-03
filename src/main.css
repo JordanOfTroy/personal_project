@@ -295,4 +295,7 @@ h2 {
 
 .info_section {
   width: 25%;
-  background-color: red; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: solid #13120E 1px; }
