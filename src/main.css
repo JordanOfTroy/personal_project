@@ -163,18 +163,14 @@ main {
 .main {
   background-color: #B1D59A;
   position: relative;
-  top: 60px;
   width: 100vw;
-  height: 100vh;
+  height: 92vh;
   color: #13120E;
   display: flex;
   justify-content: center; }
-  .main input {
-    height: 25px;
-    margin-right: 10px;
+  .main section {
     position: relative;
-    left: 25px;
-    box-shadow: 3px 3px 7px #13120E; }
+    top: 30px; }
   .main button {
     background-color: #5FA952;
     color: #DEECC5;
@@ -210,10 +206,12 @@ h2 {
 
 .about_main {
   position: relative;
-  top: 68px;
   display: flex;
   background-color: #B1D59A;
-  height: 91vh; }
+  height: 92vh; }
+  .about_main section {
+    position: relative;
+    top: 70px; }
 
 .footer {
   background-image: linear-gradient(to top, #367335, #B1D59A);
