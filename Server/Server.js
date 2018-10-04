@@ -39,6 +39,8 @@ app.use((req, res, next) => {
   }
 })
 
+app.use( express.static( `${__dirname}/../build` ) )
+
 /***************************************************************** */
 
 app.get(`/api/type/:typeid`, ctrl.getTheType )
