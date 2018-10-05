@@ -41,7 +41,7 @@ class SubType extends Component {
       return (
         <div className = 'type_main' key = {index}>
           <div>
-            <img src={image} alt="available individual"/>
+            <img className = 'indi_img' src={image} alt="available individual"/>
           </div>
           <div>
             <h4>serial number: {unique_id}</h4>
@@ -61,7 +61,7 @@ class SubType extends Component {
 
 
    return (
-      <div class = 'type_wrapper'>
+      <div class = 'dashboard_wrapper type_wrapper'>
         {individual}
       </div>
     ) 
