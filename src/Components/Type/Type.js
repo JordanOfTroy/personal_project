@@ -39,16 +39,19 @@ something () {
     
       return (
         <div className = 'type_main' key = {index}>
-          <Link to = {`/subtype/${id}`} >
-            <img src={image_url} alt={common_name}/>
-          </Link>
-          <h4>{common_name}</h4>
+          <div className = 'sub_div'>
+            <Link to = {`/subtype/${id}`} >
+              <img className = 'img' src={image_url} alt={common_name}/>
+            </Link>
+            <h4>{common_name}</h4>
+          </div>
+          
         </div>
       )
     })
 
     return (
-      <div className = 'type_wrapper'>
+      <div className = ' dashboard_wrapper type_wrapper'>
         {typeCard}
       </div>
     )
