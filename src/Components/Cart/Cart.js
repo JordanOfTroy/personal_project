@@ -74,30 +74,30 @@ class Cart extends Component {
         <div>
           <div className = 'item' key = {index} >
             <img src={image} alt=""/>
-            <button
-              onClick = {() => this.order66(id)}
-            >X</button>
             <h4>Product ID: {unique_id}</h4>
             <h4>Price: ${cost}</h4>
+            <button
+              onClick = {() => this.order66(id)}
+            >Remove</button>
           </div>
-          <hr/>
         </div>
         
       )
     })
     return (
-      <section className = 'cart_wrapper'>
+      <section className = ' dashboard_wrapper cart_wrapper'>
         <section className = 'cart cart_section'>
-          <h1>Cart Items</h1>
+          {/* <h1>Cart Items</h1> */}
           {cartItem}
         </section>
         <section className = 'cart info_section'>
-          <h2>Sub Total: ${subTotal.toFixed(2)}</h2>
-          <h2>Shipping: $75.00</h2>
-          <h2>Total: ${(amount +75).toFixed(2)}</h2>
+          <h2 className = 'price_info'>Sub Total: ${subTotal.toFixed(2)}</h2>
+          <h2 className = 'price_info'>Shipping: $75.00</h2>
+          <h2 className = 'price_info'>Total: ${(amount +75).toFixed(2)}</h2>
           <StripeCheckout
+            className = 'checkout'
                 name="Serpents Edge"
-                description="Your scaly friends are waiting to see you!"
+                description="Thanksssss for everything!"
                 image={require('../../Assets/se_logo.png')}
                 token= {this.onToken}
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
