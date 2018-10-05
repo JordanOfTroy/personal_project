@@ -208,23 +208,40 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #B1D59A;
   position: relative;
-  top: 68px;
   width: 100vw;
   height: 100vh;
   padding-top: 15px; }
   main div {
     display: flex;
     height: 80px;
+    width: 80vw;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    background-color: #13120E;
+    opacity: .87;
+    border-radius: 9px;
+    margin: 10px;
+    box-shadow: 0px 0px 2px #13120E; }
     main div h1 {
       width: 30%;
       font-size: 20px; }
     main div p {
       font-size: 15px;
       width: 60%; }
+
+.sub_section {
+  position: relative;
+  top: 9.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.question {
+  color: #DEECC5; }
+
+.answer {
+  color: #DEECC5; }
 
 .account {
   display: flex;
@@ -293,7 +310,21 @@ main {
   height: 92vh; }
   .about_main section {
     position: relative;
-    top: 70px; }
+    top: 9.5%;
+    display: flex;
+    flex-direction: column; }
+  .about_main div {
+    background-color: #13120E;
+    border-radius: 9px;
+    opacity: .87;
+    margin: 10px;
+    padding: 15px; }
+    .about_main div h1 {
+      font-size: 20px; }
+    .about_main div p {
+      margin: 5px 0px;
+      font-size: 14px;
+      text-indent: 30px; }
 
 .footer {
   background-image: linear-gradient(to top, #367335, #B1D59A);
