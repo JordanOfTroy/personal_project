@@ -12,7 +12,7 @@ class Account extends Component {
       firstName: '',
       lastName: '',
       username: '',
-      editToggle: false,
+      editToggle: true,
       id: 0
     }
     this.handleEdit = this.handleEdit.bind(this)
@@ -78,10 +78,10 @@ class Account extends Component {
   let {email, firstName, lastName, username, editToggle } = this.state
   console.log(this.state)
     return(
-      <div className = 'main'>
+      <div className = 'dashboard_wrapper account'>
         <div className = 'left'>
           <section>
-            <section>
+            <div>
               <h2>Name: {`${firstName} ${lastName}`}</h2>
             {
               editToggle 
@@ -103,7 +103,7 @@ class Account extends Component {
                 name = 'lastName' 
                 type="text"/>
             }
-            </section>
+            </div>
             <div>
               <h2>Username: {username}</h2>
               {
@@ -135,7 +135,7 @@ class Account extends Component {
             <div>
               {
                 !editToggle ? 
-                <button
+                <button 
                   onClick = {this.handleEdit}
                 >Edit</button> 
                 :
@@ -150,6 +150,7 @@ class Account extends Component {
     )
   }
 }
+
  function mapStateToProps (state) {
    let {username, email, firstName, lastName} = state
 

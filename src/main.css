@@ -150,7 +150,8 @@ P {
     box-shadow: 1px 1px 3px #13120E;
     margin: 10px;
     padding: 5px 10px;
-    width: 350px; }
+    width: 350px;
+    text-align: center; }
 
 .inputs {
   display: flex;
@@ -158,6 +159,7 @@ P {
 
 .dashboard_wrapper {
   background-image: url("https://c.pxhere.com/photos/17/11/grooved_pine_bark_old_tree_plant_background_close_up_wild_wood_interior_wooden_wall-817057.jpg!d");
+  background-size: cover;
   overflow: hidden; }
 
 .carousel {
@@ -222,32 +224,49 @@ main {
       font-size: 15px;
       width: 60%; }
 
-.main {
-  background-color: #B1D59A;
-  position: relative;
-  width: 100vw;
-  height: 92vh;
-  color: #13120E;
+.account {
   display: flex;
-  justify-content: center; }
-  .main button {
-    background-color: #5FA952;
-    color: #DEECC5;
-    font-family: "Megrim", sans-serif;
-    font-size: 22px;
-    text-transform: uppercase;
-    font-weight: bolder;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10%;
-    margin: 20px; }
-    .main button:hover {
-      background-color: #367335;
-      color: #F0F6E5; }
+  justify-content: center;
+  align-items: center; }
 
-h2 {
-  font-size: 25px;
-  margin: 20px; }
+.left {
+  background-color: #13120E;
+  color: #DEECC5;
+  opacity: .87;
+  height: 86vh;
+  width: 40vw;
+  position: relative;
+  top: 4.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .left h2 {
+    opacity: 1;
+    text-align: center;
+    margin: 50px 0px;
+    padding: 10px; }
+  .left input {
+    text-align: center;
+    margin: 0px 10px;
+    background-color: #B1D59A;
+    border: none;
+    border-radius: 9px;
+    padding: 5px 10px;
+    width: 250px; }
+  .left button {
+    background-color: #DEECC5;
+    border: none;
+    padding: 5px;
+    border-radius: 9px;
+    box-shadow: 1px 1px 3px #13120E;
+    font-family: "Megrim", sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+    padding: 5px 10px;
+    margin-top: 20px; }
+    .left button:hover {
+      background-color: #367335;
+      color: #B1D59A; }
 
 .clearance_main {
   background-color: #B1D59A;
