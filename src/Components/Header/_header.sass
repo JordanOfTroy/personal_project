@@ -74,7 +74,56 @@
   letter-spacing: 2px
   text-decoration: none
 
+.Modal
+  background-color: $dark-green
+  color: $black
+  position: relative
+  border-radius: 12px
+  padding: 20px
+  box-shadow: 3px 3px 6px $black
+  display: flex
+  flex-direction: column
+  align-items: center
+  #close 
+    position: absolute
+    left: 525px
+    top: 20px
+  #login 
+    position: absolute
+    left: 505px
+    top: 50px
+  #register 
+    position: absolute
+    left: 505px
+    top: 90px
+  #create 
+    position: absolute
+    left: 505px
+    top: 90px
+  .button
+    margin: 10px
+    width: 70px
     
+  button
+    background-color: $dark-white
+    border: none
+    padding: 5px
+    border-radius: 9px
+    font-family: $megrim
+    font-weight: bolder
+    &:hover
+      background-color: $black
+      color: $light-green
+  input 
+    background-color: $light-green
+    margin: 10px
+    padding: 5px 10px
+    width: 350px
+
+.inputs
+  display: flex
+  flex-direction: column
+
 
 
 

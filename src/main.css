@@ -102,6 +102,55 @@ P {
   letter-spacing: 2px;
   text-decoration: none; }
 
+.Modal {
+  background-color: #367335;
+  color: #13120E;
+  position: relative;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 3px 3px 6px #13120E;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .Modal #close {
+    position: absolute;
+    left: 525px;
+    top: 20px; }
+  .Modal #login {
+    position: absolute;
+    left: 505px;
+    top: 50px; }
+  .Modal #register {
+    position: absolute;
+    left: 505px;
+    top: 90px; }
+  .Modal #create {
+    position: absolute;
+    left: 505px;
+    top: 90px; }
+  .Modal .button {
+    margin: 10px;
+    width: 70px; }
+  .Modal button {
+    background-color: #DEECC5;
+    border: none;
+    padding: 5px;
+    border-radius: 9px;
+    font-family: "Megrim", sans-serif;
+    font-weight: bolder; }
+    .Modal button:hover {
+      background-color: #13120E;
+      color: #B1D59A; }
+  .Modal input {
+    background-color: #B1D59A;
+    margin: 10px;
+    padding: 5px 10px;
+    width: 350px; }
+
+.inputs {
+  display: flex;
+  flex-direction: column; }
+
 .dashboard_wrapper {
   background-image: url("https://c.pxhere.com/photos/17/11/grooved_pine_bark_old_tree_plant_background_close_up_wild_wood_interior_wooden_wall-817057.jpg!d");
   overflow: hidden; }

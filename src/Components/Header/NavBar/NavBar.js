@@ -123,9 +123,12 @@ class NavBar extends Component {
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
-      backgroundColor: '#B1D59A',
-      height: '250px',
-      width: '500px'
+      height: '300px',
+      width: '600px',
+      button: {
+        backgroundColor: 'blue'
+      }
+      // display: 'flex'
     },
     
   }
@@ -188,9 +191,14 @@ class NavBar extends Component {
       onRequestClose={this.closeModal}
       style={customStyles}
       contentLabel="Example Modal"
+      className="Modal"
+      // overlayClassName="Overlay"
       >
-      <button onClick={this.closeModal}>cancel</button>
-      <div>
+      <button
+        id = 'close'
+        onClick={this.closeModal}>cancel
+      </button>
+      <div className = 'inputs'>
         <input
         placeholder = 'Username'
         name = 'username'
@@ -203,6 +211,7 @@ class NavBar extends Component {
         value = {this.state.password}
         onChange = {this.handleInputFn}
         type="text"/>
+        
         {
           this.state.registerToggle
           &&
@@ -235,17 +244,20 @@ class NavBar extends Component {
         }
       </div>
       
-      <button
+      <button id = 'login'
+        className = 'button'
         onClick = {this.login}
       >Login</button>
       {
         this.state.registerToggle
         ?
-        <button
-        onClick = {this.createAccount}
+        <button id = 'create'
+          className = 'button'
+          onClick = {this.createAccount}
         >Create Account</button>
         :
-        <button
+        <button id = 'register'
+          className = 'button'
           onClick = {this.register}
         >Register</button>
       }
