@@ -11,12 +11,22 @@ export default class Type extends Component{
     }
   }
 
-
-  componentDidMount () {
-    let {typeid} = this.props.match.params
+something () {
+  let {typeid} = this.props.match.params
     axios.get(`/api/type/${typeid}`).then(res => {
       this.setState({displays: res.data})
     })
+}
+
+  componentDidMount () {
+    this.something()
+  }
+
+  componentDidUpdate (prevProps) {
+    // console.log(prevProps.match.params.typeid)
+    if (prevProps.match.params.typeid !== this.props.match.params.typeid) {
+      this.something()
+    }
   }
 
   render () {

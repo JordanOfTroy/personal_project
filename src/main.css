@@ -311,7 +311,13 @@ main {
     margin: 0px 20px; }
   .footer .link {
     margin: 0px 30px;
-    list-style: none; }
+    list-style: none;
+    color: #13120E;
+    font-family: "Megrim", sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none; }
 
 .dashboard_wrapper {
   height: 100vh; }
