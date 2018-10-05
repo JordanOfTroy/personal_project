@@ -12,7 +12,7 @@ class Account extends Component {
       firstName: '',
       lastName: '',
       username: '',
-      editToggle: true,
+      editToggle: false,
       id: 0
     }
     this.handleEdit = this.handleEdit.bind(this)
