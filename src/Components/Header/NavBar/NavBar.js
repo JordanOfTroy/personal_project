@@ -210,7 +210,7 @@ class NavBar extends Component {
         name = 'password'
         value = {this.state.password}
         onChange = {this.handleInputFn}
-        type="text"/>
+        type="password"/>
         
         {
           this.state.registerToggle
