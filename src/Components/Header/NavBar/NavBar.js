@@ -91,7 +91,15 @@ class NavBar extends Component {
   }
 
   closeModal() {
-    this.setState({modalIsOpen: false});
+    this.setState({
+      modalIsOpen: false,
+      registerToggle: false,
+      username: '',
+      password: '',
+      firstName: '',
+      lastName: '',
+      email: ''
+    });
   }
 
   login () {
