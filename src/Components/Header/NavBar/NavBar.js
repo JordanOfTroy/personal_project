@@ -142,9 +142,7 @@ class NavBar extends Component {
   }
   return (
     <div className = 'nav_bar'>
-      <Link
-        className = 'nav_link'
-        to = '/'> Shop </Link>
+      
     
       {
         username
@@ -159,6 +157,10 @@ class NavBar extends Component {
           onClick = {this.openModal}
         >Login</button>
       }
+
+      <Link
+        className = 'nav_link'
+        to = '/'> Shop </Link>
       
       <Link
         className = 'nav_link'
