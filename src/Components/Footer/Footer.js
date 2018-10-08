@@ -10,7 +10,7 @@ export default function Footer () {
           <li>Local: 801-555-1234</li>
           <li>Collect: 800-555-1234</li>
           <li>Email: customer_support@serpentsedge.com</li>
-          <li>Snail Mail: PO BOX 0000, Prove Utah, 84601</li>
+          <li>Snail Mail: PO BOX 0000, Provo Utah, 84601</li>
         </ul>
       </div>
       <div>
