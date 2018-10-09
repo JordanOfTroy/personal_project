@@ -181,7 +181,7 @@ module.exports = {
   },
 
   sendEmail: (req, res) => {
-    let{first_name, last_name} = req.session.user
+    let{first_name, last_name, email} = req.session.user
     let {RGE,EPW} = process.env
   // console.log(RGE, EPW)
   let transporter = nodemailer.createTransport(smtpTransport({
@@ -200,7 +200,7 @@ module.exports = {
 
   let mailOptions = {
     from: 'customer_support@serpentsedge.com',
-    to: 'jordantroysmithson@gmail.com',
+    to: `${email}`,
     subject: 'Order Confirmation',
     html: `<h1>Dear ${first_name} ${last_name},</h1>
     <h1>Serpents Edge would like to thank you for your recent purchase.</h1>
